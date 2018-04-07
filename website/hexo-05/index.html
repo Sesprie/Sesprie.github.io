@@ -1,30 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8">
     
     <title>从零开始制作 Hexo 主题 | Sesprie</title>
     
+    <!--�Զ��嶥����������ɫ-->
 	<script src="/js/pace.min.js"></script>
 	<link href="/css/pace-theme-flash.css" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-        <meta name="keywords" content="hexo,博客主题" />
+        <meta name="keywords" content="hexo,博客主题自定义" />
     
     <meta name="description" content="写在前面本文将会从零开始开发一个简单的博客主题。样式主要参考 Hexo theme 中的 Noise 主题。 开始之前你需要了解：  模板引擎 CSS预处理器 Hexo 文档  本文使用的模板引擎为 ejs，使用的 CSS 预处理器为 stylus。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的">
-<meta name="keywords" content="hexo,博客主题">
+<meta name="keywords" content="hexo,博客主题自定义">
 <meta property="og:type" content="article">
 <meta property="og:title" content="从零开始制作 Hexo 主题">
 <meta property="og:url" content="http://yoursite.com/website/hexo-05/index.html">
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="写在前面本文将会从零开始开发一个简单的博客主题。样式主要参考 Hexo theme 中的 Noise 主题。 开始之前你需要了解：  模板引擎 CSS预处理器 Hexo 文档  本文使用的模板引擎为 ejs，使用的 CSS 预处理器为 stylus。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/website/hexo-05-01.jpg">
-<meta property="og:updated_time" content="2018-04-07T05:24:16.901Z">
+<meta property="og:image" content="http://yoursite.com/src/img/website/hexo-05-01.jpg">
+<meta property="og:updated_time" content="2018-04-07T13:38:57.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始制作 Hexo 主题">
 <meta name="twitter:description" content="写在前面本文将会从零开始开发一个简单的博客主题。样式主要参考 Hexo theme 中的 Noise 主题。 开始之前你需要了解：  模板引擎 CSS预处理器 Hexo 文档  本文使用的模板引擎为 ejs，使用的 CSS 预处理器为 stylus。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的">
-<meta name="twitter:image" content="http://yoursite.com/img/website/hexo-05-01.jpg">
+<meta name="twitter:image" content="http://yoursite.com/src/img/website/hexo-05-01.jpg">
     
 
     
@@ -164,14 +167,14 @@
                 
     <div class="article-tag">
         <i class="fa fa-tag"></i>
-        <a class="tag-link" href="/tags/hexo/">hexo</a>, <a class="tag-link" href="/tags/博客主题/">博客主题</a>
+        <a class="tag-link" href="/tags/hexo/">hexo</a>, <a class="tag-link" href="/tags/博客主题自定义/">博客主题自定义</a>
     </div>
 
             </div>
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/../../img/website/hexo-05-01.jpg" alt=""></p>
+            <p><img src="/../../src/img/website/hexo-05-01.jpg" alt=""></p>
 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文将会从零开始开发一个简单的博客主题。样式主要参考 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo theme</a> 中的 <a href="https://github.com/lotabout/hexo-theme-noise" target="_blank" rel="noopener">Noise</a> 主题。</p>
 <p>开始之前你需要了解：</p>
 <ul>
@@ -190,7 +193,7 @@
 <p>修改站点配置文件中的主题配置，使用我们刚刚创建的 <code>theme-example</code> 主题：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: theme-example</span><br></pre></td></tr></table></figure>
 <p>运行 <code>hexo server --debug</code> 以 debug 模式开启 Hexo 本地服务器预览，访问 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>。</p>
-<p><img src="/../../img/website/hexo-05-02.jpg" alt=""></p>
+<p><img src="/../../src/img/website/hexo-05-02.jpg" alt=""></p>
 <h2 id="添加页面导航"><a href="#添加页面导航" class="headerlink" title="添加页面导航"></a>添加页面导航</h2><p>现在我们需要在页面中添加导航，由于导航不单单会在首页出现，所以我们在 <code>layout</code> 中创建共用的布局文件 <code>layout.ejs</code>， 同时创建 <code>_partial/head.ejs</code> 保存 HTML 的 head 以及创建 <code>_partial/header.ejs</code> 文件，编写页面导航部分。</p>
 <p><code>layout/layout.ejs</code>:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;%- partial(<span class="string">'_partial/head'</span>) %&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;%- partial(<span class="string">'_partial/header'</span>) %&gt;</span><br><span class="line">    &lt;main <span class="class"><span class="keyword">class</span></span>=<span class="string">"main"</span>&gt;</span><br><span class="line">      &lt;%- body %&gt;</span><br><span class="line">    &lt;<span class="regexp">/main&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
@@ -201,7 +204,7 @@
 <p><code>layout/_partial/header.ejs</code>:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;header <span class="class"><span class="keyword">class</span></span>=<span class="string">"header"</span>&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"blog-title"</span>&gt;</span><br><span class="line">    &lt;a href=<span class="string">"&lt;%- url_for() %&gt;"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"logo"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;nav class="navbar"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;ul class="menu"&gt;</span></span><br><span class="line"><span class="regexp">      &lt;li class="menu-item"&gt;</span></span><br><span class="line"><span class="regexp">        &lt;a href="/</span><span class="string">" class="</span>menu-item-link<span class="string">"&gt;Home&lt;/a&gt;</span></span><br><span class="line"><span class="string">      &lt;/li&gt;</span></span><br><span class="line"><span class="string">      &lt;li class="</span>menu-item<span class="string">"&gt;</span></span><br><span class="line"><span class="string">        &lt;a href="</span>/archives<span class="string">" class="</span>menu-item-link<span class="string">"&gt;Archive&lt;/a&gt;</span></span><br><span class="line"><span class="string">      &lt;/li&gt;</span></span><br><span class="line"><span class="string">    &lt;/ul&gt;</span></span><br><span class="line"><span class="string">  &lt;/nav&gt;</span></span><br><span class="line"><span class="string">&lt;/header&gt;</span></span><br></pre></td></tr></table></figure>
 <p>接着我们清空 <code>index.ejs</code> 中的内容，并添加 <code>&lt;h2&gt;Hello World&lt;/h2&gt;</code>。在 <code>layout</code> 目录下的 <code>index.ejs</code> 会自动继承 <code>layout.ejs</code>，并将其中的内容填入 <code>&lt;%- body %&gt;</code> 的位置。我们将得到一个有导航菜单的 Hello World 页面。</p>
-<p><img src="/../../img/website/hexo-05-03.jpg" alt=""></p>
+<p><img src="/../../src/img/website/hexo-05-03.jpg" alt=""></p>
 <h2 id="添加主题配置文件"><a href="#添加主题配置文件" class="headerlink" title="添加主题配置文件"></a>添加主题配置文件</h2><p>实际上我们需要让导航菜单根据我们的需要显示不同的项，上面这种写法不方便修改。所以我们会在主题的配置文件中添加导航菜单的配置。在 <code>thmem-demo</code> 下新建主题的配置文件 <code>_config.yml</code>，在其中添加需要配置的字段。然后可以通过 <code>theme</code> 这个变量来拿到该配置文件中的配置。</p>
 <p><code>theme-demo/_config.yml</code>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  Home: /</span><br><span class="line">  Archives: /archives</span><br></pre></td></tr></table></figure>
@@ -230,7 +233,7 @@
 <p><code>layout/_partial/head.ejs</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</span><br><span class="line">  &lt;meta content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot; name=&quot;viewport&quot;&gt;</span><br><span class="line">  &lt;title&gt;&lt;%= config.title %&gt;&lt;/title&gt;</span><br><span class="line">  &lt;%- css(&apos;css/style.css&apos;) %&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
 <p>至此，我们会看到站点的首页是这个样子的：</p>
-<p><img src="/../../img/website/hexo-05-04.jpg" alt=""></p>
+<p><img src="/../../src/img/website/hexo-05-04.jpg" alt=""></p>
 <h2 id="添加分页"><a href="#添加分页" class="headerlink" title="添加分页"></a>添加分页</h2><p>在站点的 <code>source/_post/</code> 目录下存放的是我们的文章，现在我们把原本的 <code>hello-world.md</code> 复制黏贴 10+ 次，再查看站点首页。会发现，首页只显示了 10 篇文章。</p>
 <p>首页显示的文章数量我们可以通过站点配置文件中的 <code>per_page</code> 字段来修改，但是我们不可能把所有文章都放在一页，所以我们现在来添加文章列表的分页。</p>
 <p>新建 <code>_partial/paginator.ejs</code>:</p>
@@ -269,7 +272,7 @@
 
 
 
-    <a data-url="http://yoursite.com/website/hexo-05/" data-id="cjfpdiyf60008r0dminmgyd9x" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/website/hexo-05/" data-id="cjfpfelgj000afkdm6n8yeezx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -438,10 +441,50 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/website/hexo-10/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../src/img/website/hexo-10-01.jpg)" alt="为hexo的主题添加动态背景" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/website/hexo-10/" class="title">为hexo的主题添加动态背景</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T13:22:58.592Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/website/hexo-09/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../src/img/website/hexo-09-01.jpg)" alt="为hexo主题添加顶部进度加载条" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/website/hexo-09/" class="title">为hexo主题添加顶部进度加载条</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T13:01:37.358Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/website/hexo-08/" class="thumbnail">
     
     
-        <span style="background-image:url(/../../img/website/hexo-08-01.jpg)" alt="为右键设置点击出现桃心效果" class="thumbnail-image"></span>
+        <span style="background-image:url(/../../src/img/website/hexo-08-01.jpg)" alt="为右键设置点击出现桃心效果" class="thumbnail-image"></span>
     
     
 </a>
@@ -461,7 +504,7 @@
                             <a href="/website/hexo-07/" class="thumbnail">
     
     
-        <span style="background-image:url(/../../img/website/hexo-07-01.jpg)" alt="【入门-&gt;进阶ing】使用hexo快速搭建本地blog" class="thumbnail-image"></span>
+        <span style="background-image:url(/../../src/img/website/hexo-07-01.jpg)" alt="【入门-&gt;进阶ing】使用hexo快速搭建本地blog" class="thumbnail-image"></span>
     
     
 </a>
@@ -481,7 +524,7 @@
                             <a href="/website/hexo-06/" class="thumbnail">
     
     
-        <span style="background-image:url(/../../img/website/hexo-06-01.jpg)" alt="浅谈模板引擎" class="thumbnail-image"></span>
+        <span style="background-image:url(/../../src/img/website/hexo-06-01.jpg)" alt="浅谈模板引擎" class="thumbnail-image"></span>
     
     
 </a>
@@ -492,46 +535,6 @@
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/website/hexo-06/" class="title">浅谈模板引擎</a></p>
                             <p class="item-date"><time datetime="2018-04-07T05:12:08.429Z" itemprop="datePublished">2018-04-07</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/website/hexo-05/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../img/website/hexo-05-01.jpg)" alt="从零开始制作 Hexo 主题" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/website/hexo-05/" class="title">从零开始制作 Hexo 主题</a></p>
-                            <p class="item-date"><time datetime="2018-04-07T04:17:14.000Z" itemprop="datePublished">2018-04-07</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/website/hexo-04/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../img/website/hexo-04-01.jpg)" alt="Hexo折腾记——自动部署篇" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/website/hexo-04/" class="title">Hexo折腾记——自动部署篇</a></p>
-                            <p class="item-date"><time datetime="2018-04-07T04:03:28.000Z" itemprop="datePublished">2018-04-07</time></p>
                         </div>
                     </li>
                 
@@ -547,7 +550,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">10</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">12</span></li></ul>
         </div>
     </div>
 
@@ -557,7 +560,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题/">博客主题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题自定义/">博客主题自定义</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题自定义/">博客主题自定义</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -567,7 +570,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题/" style="font-size: 10px;">博客主题</a> <a href="/tags/博客主题自定义/" style="font-size: 10px;">博客主题自定义</a> <a href="/tags/博客搭建/" style="font-size: 15px;">博客搭建</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
+            <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题自定义/" style="font-size: 13.33px;">博客主题自定义</a> <a href="/tags/博客搭建/" style="font-size: 16.67px;">博客搭建</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
         </div>
     </div>
 
@@ -655,6 +658,9 @@
 <script src="/js/main.js"></script>
 
     </div>
+	{% if theme.canvas_nest %}
+	<script type="text/javascript" src="/js/canvas-nest.min.js"></script>
+	{% endif %}
 </body>
 </html>
 <!-- ҳ����С���� -->

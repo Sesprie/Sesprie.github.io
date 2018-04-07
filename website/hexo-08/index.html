@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="utf-8">
     
     <title>为右键设置点击出现桃心效果 | Sesprie</title>
     
+    <!--�Զ��嶥����������ɫ-->
 	<script src="/js/pace.min.js"></script>
 	<link href="/css/pace-theme-flash.css" rel="stylesheet">
+
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="hexo,博客主题自定义" />
@@ -19,12 +22,12 @@
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="最终效果，见文末 步骤： 在/themes/hueman/source/js/中新建一个love.js，复制粘贴下面最大的一坨代码。打开/themes/hueman/layout/layout.ejs将 12&amp;lt;!-- 页面点击小红心 --&amp;gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&amp;gt;&amp;lt;/script&amp;gt">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/website/hexo-08-01.jpg">
-<meta property="og:updated_time" content="2018-04-07T12:15:07.222Z">
+<meta property="og:image" content="http://yoursite.com/src/img/website/hexo-08-01.jpg">
+<meta property="og:updated_time" content="2018-04-07T13:00:51.142Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为右键设置点击出现桃心效果">
 <meta name="twitter:description" content="最终效果，见文末 步骤： 在/themes/hueman/source/js/中新建一个love.js，复制粘贴下面最大的一坨代码。打开/themes/hueman/layout/layout.ejs将 12&amp;lt;!-- 页面点击小红心 --&amp;gt;&amp;lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/love.js&quot;&amp;gt;&amp;lt;/script&amp;gt">
-<meta name="twitter:image" content="http://yoursite.com/img/website/hexo-08-01.jpg">
+<meta name="twitter:image" content="http://yoursite.com/src/img/website/hexo-08-01.jpg">
     
 
     
@@ -171,14 +174,14 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/../../img/website/hexo-08-01.jpg" alt=""></p>
+            <p><img src="/../../src/img/website/hexo-08-01.jpg" alt=""></p>
 <p>最终效果，见文末</p>
 <p>步骤：</p>
 <p>在<code>/themes/hueman/source/js/</code>中新建一个<code>love.js</code>，复制粘贴下面<strong>最大的一坨代码</strong>。打开<code>/themes/hueman/layout/layout.ejs</code>将</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/src/love.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>粘贴在文件尾部，保存。</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line">!<span class="function"><span class="keyword">function</span> (<span class="params">e, t, a</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">n</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        c(<span class="string">".heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;"</span>), o(), r()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">r</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> e = <span class="number">0</span>; e &lt; d.length; e++) d[e].alpha &lt;= <span class="number">0</span> ? (t.body.removeChild(d[e].el), d.splice(e, <span class="number">1</span>)) : (d[e].y--, d[e].scale += <span class="number">.004</span>, d[e].alpha -= <span class="number">.013</span>, d[e].el.style.cssText = <span class="string">"left:"</span> + d[e].x + <span class="string">"px;top:"</span> + d[e].y + <span class="string">"px;opacity:"</span> + d[e].alpha + <span class="string">";transform:scale("</span> + d[e].scale + <span class="string">","</span> + d[e].scale + <span class="string">") rotate(45deg);background:"</span> + d[e].color + <span class="string">";z-index:99999"</span>);</span><br><span class="line">        requestAnimationFrame(r)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">o</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> t = <span class="string">"function"</span> == <span class="keyword">typeof</span> e.onclick &amp;&amp; e.onclick;</span><br><span class="line">        e.onclick = <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">            t &amp;&amp; t(), i(e)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">i</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a = t.createElement(<span class="string">"div"</span>);</span><br><span class="line">        a.className = <span class="string">"heart"</span>, d.push(&#123;</span><br><span class="line">            el: a,</span><br><span class="line">            x: e.clientX - <span class="number">5</span>,</span><br><span class="line">            y: e.clientY - <span class="number">5</span>,</span><br><span class="line">            scale: <span class="number">1</span>,</span><br><span class="line">            alpha: <span class="number">1</span>,</span><br><span class="line">            color: s()</span><br><span class="line">        &#125;), t.body.appendChild(a)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params">e</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> a = t.createElement(<span class="string">"style"</span>);</span><br><span class="line">        a.type = <span class="string">"text/css"</span>;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            a.appendChild(t.createTextNode(e))</span><br><span class="line">        &#125; <span class="keyword">catch</span> (t) &#123;</span><br><span class="line">            a.styleSheet.cssText = e</span><br><span class="line">        &#125;</span><br><span class="line">        t.getElementsByTagName(<span class="string">"head"</span>)[<span class="number">0</span>].appendChild(a)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">s</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"rgb("</span> + ~~(<span class="number">255</span> * <span class="built_in">Math</span>.random()) + <span class="string">","</span> + ~~(<span class="number">255</span> * <span class="built_in">Math</span>.random()) + <span class="string">","</span> + ~~(<span class="number">255</span> * <span class="built_in">Math</span>.random()) + <span class="string">")"</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> d = [];</span><br><span class="line">    e.requestAnimationFrame = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> e.requestAnimationFrame || e.webkitRequestAnimationFrame || e.mozRequestAnimationFrame || e.oRequestAnimationFrame || e.msRequestAnimationFrame || <span class="function"><span class="keyword">function</span> (<span class="params">e</span>) </span>&#123;</span><br><span class="line">            setTimeout(e, <span class="number">1e3</span> / <span class="number">60</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;(), n()</span><br><span class="line">&#125;(<span class="built_in">window</span>, <span class="built_in">document</span>);</span><br></pre></td></tr></table></figure>
-<p><img src="/../../img/website/hexo-08-02.gif" alt="彩色桃心效果"></p>
+<p><img src="/../../src/img/website/hexo-08-02.gif" alt="彩色桃心效果"></p>
 <p><a href="https://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="noopener">原文地址</a></p>
 
         </div>
@@ -187,7 +190,7 @@
 
 
 
-    <a data-url="http://yoursite.com/website/hexo-08/" data-id="cjfpdiyfa000cr0dmamofw1v7" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/website/hexo-08/" data-id="cjfpfelgn000efkdmq10f4hta" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -324,6 +327,16 @@
         
 <nav id="article-nav">
     
+        <a href="/website/hexo-09/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            为hexo主题添加顶部进度加载条
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/website/hexo-07/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
@@ -346,10 +359,50 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/website/hexo-10/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../src/img/website/hexo-10-01.jpg)" alt="为hexo的主题添加动态背景" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/website/hexo-10/" class="title">为hexo的主题添加动态背景</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T13:22:58.592Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/website/hexo-09/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../src/img/website/hexo-09-01.jpg)" alt="为hexo主题添加顶部进度加载条" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/website/hexo-09/" class="title">为hexo主题添加顶部进度加载条</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T13:01:37.358Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/website/hexo-08/" class="thumbnail">
     
     
-        <span style="background-image:url(/../../img/website/hexo-08-01.jpg)" alt="为右键设置点击出现桃心效果" class="thumbnail-image"></span>
+        <span style="background-image:url(/../../src/img/website/hexo-08-01.jpg)" alt="为右键设置点击出现桃心效果" class="thumbnail-image"></span>
     
     
 </a>
@@ -369,7 +422,7 @@
                             <a href="/website/hexo-07/" class="thumbnail">
     
     
-        <span style="background-image:url(/../../img/website/hexo-07-01.jpg)" alt="【入门-&gt;进阶ing】使用hexo快速搭建本地blog" class="thumbnail-image"></span>
+        <span style="background-image:url(/../../src/img/website/hexo-07-01.jpg)" alt="【入门-&gt;进阶ing】使用hexo快速搭建本地blog" class="thumbnail-image"></span>
     
     
 </a>
@@ -389,7 +442,7 @@
                             <a href="/website/hexo-06/" class="thumbnail">
     
     
-        <span style="background-image:url(/../../img/website/hexo-06-01.jpg)" alt="浅谈模板引擎" class="thumbnail-image"></span>
+        <span style="background-image:url(/../../src/img/website/hexo-06-01.jpg)" alt="浅谈模板引擎" class="thumbnail-image"></span>
     
     
 </a>
@@ -400,46 +453,6 @@
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/website/hexo-06/" class="title">浅谈模板引擎</a></p>
                             <p class="item-date"><time datetime="2018-04-07T05:12:08.429Z" itemprop="datePublished">2018-04-07</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/website/hexo-05/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../img/website/hexo-05-01.jpg)" alt="从零开始制作 Hexo 主题" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/website/hexo-05/" class="title">从零开始制作 Hexo 主题</a></p>
-                            <p class="item-date"><time datetime="2018-04-07T04:17:14.000Z" itemprop="datePublished">2018-04-07</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/website/hexo-04/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../img/website/hexo-04-01.jpg)" alt="Hexo折腾记——自动部署篇" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/website/hexo-04/" class="title">Hexo折腾记——自动部署篇</a></p>
-                            <p class="item-date"><time datetime="2018-04-07T04:03:28.000Z" itemprop="datePublished">2018-04-07</time></p>
                         </div>
                     </li>
                 
@@ -455,7 +468,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">10</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">12</span></li></ul>
         </div>
     </div>
 
@@ -465,7 +478,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题/">博客主题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题自定义/">博客主题自定义</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题自定义/">博客主题自定义</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -475,7 +488,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题/" style="font-size: 10px;">博客主题</a> <a href="/tags/博客主题自定义/" style="font-size: 10px;">博客主题自定义</a> <a href="/tags/博客搭建/" style="font-size: 15px;">博客搭建</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
+            <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题自定义/" style="font-size: 13.33px;">博客主题自定义</a> <a href="/tags/博客搭建/" style="font-size: 16.67px;">博客搭建</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
         </div>
     </div>
 
@@ -563,6 +576,9 @@
 <script src="/js/main.js"></script>
 
     </div>
+	{% if theme.canvas_nest %}
+	<script type="text/javascript" src="/js/canvas-nest.min.js"></script>
+	{% endif %}
 </body>
 </html>
 <!-- ҳ����С���� -->
