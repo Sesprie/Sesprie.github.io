@@ -3,30 +3,30 @@
 <head>
     <meta charset="utf-8">
     
-    <title>【入门】使用hexo快速搭建本地blog | Sesprie 驿站</title>
+    <title>Hexo折腾记——自动部署篇 | Sesprie</title>
     
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="hexo,博客搭建" />
     
-    <meta name="description" content="国际惯例，先上图  1.安装Git Bash 到这里下载Git Bash，一路回车 安装好后，打开git Bash 输入git version验证是否成功  2.安装node.js 在这里下载(LTS就是Long Term Support，current都可以)，安装过程中记得勾选Add to Path，这样可以自动配置环境变量，，打开Git Bash，输入node -v  3.安装hexo 在你">
+    <meta name="description" content="目标:写完一键上传并部署。(一个命令完成) 详细流程:上传图片至七牛，上传 deploy 文件至Github公开库 以及 博客源代码 至Github 私有库，Daocloud 检测到commit 自动构建镜像并自动更新应用。 实现:​    1.在public目录下放置Dockerfile文件: 12FROM daocloud.io/nginxCOPY ./ /usr/share/nginx/h">
 <meta name="keywords" content="hexo,博客搭建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【入门】使用hexo快速搭建本地blog">
-<meta property="og:url" content="http://yoursite.com/2018/04/06/website/hexo-01/index.html">
-<meta property="og:site_name" content="Sesprie 驿站">
-<meta property="og:description" content="国际惯例，先上图  1.安装Git Bash 到这里下载Git Bash，一路回车 安装好后，打开git Bash 输入git version验证是否成功  2.安装node.js 在这里下载(LTS就是Long Term Support，current都可以)，安装过程中记得勾选Add to Path，这样可以自动配置环境变量，，打开Git Bash，输入node -v  3.安装hexo 在你">
+<meta property="og:title" content="Hexo折腾记——自动部署篇">
+<meta property="og:url" content="http://yoursite.com/website/hexo-04/index.html">
+<meta property="og:site_name" content="Sesprie">
+<meta property="og:description" content="目标:写完一键上传并部署。(一个命令完成) 详细流程:上传图片至七牛，上传 deploy 文件至Github公开库 以及 博客源代码 至Github 私有库，Daocloud 检测到commit 自动构建镜像并自动更新应用。 实现:​    1.在public目录下放置Dockerfile文件: 12FROM daocloud.io/nginxCOPY ./ /usr/share/nginx/h">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/website/hexo-01-01.jpg">
-<meta property="og:updated_time" content="2018-04-07T04:29:58.841Z">
+<meta property="og:image" content="http://yoursite.com/img/website/hexo-04-01.jpg">
+<meta property="og:updated_time" content="2018-04-07T05:24:16.900Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【入门】使用hexo快速搭建本地blog">
-<meta name="twitter:description" content="国际惯例，先上图  1.安装Git Bash 到这里下载Git Bash，一路回车 安装好后，打开git Bash 输入git version验证是否成功  2.安装node.js 在这里下载(LTS就是Long Term Support，current都可以)，安装过程中记得勾选Add to Path，这样可以自动配置环境变量，，打开Git Bash，输入node -v  3.安装hexo 在你">
-<meta name="twitter:image" content="http://yoursite.com/img/website/hexo-01-01.jpg">
+<meta name="twitter:title" content="Hexo折腾记——自动部署篇">
+<meta name="twitter:description" content="目标:写完一键上传并部署。(一个命令完成) 详细流程:上传图片至七牛，上传 deploy 文件至Github公开库 以及 博客源代码 至Github 私有库，Daocloud 检测到commit 自动构建镜像并自动更新应用。 实现:​    1.在public目录下放置Dockerfile文件: 12FROM daocloud.io/nginxCOPY ./ /usr/share/nginx/h">
+<meta name="twitter:image" content="http://yoursite.com/img/website/hexo-04-01.jpg">
     
 
     
-        <link rel="alternate" href="/" title="Sesprie 驿站" type="application/atom+xml" />
+        <link rel="alternate" href="/" title="Sesprie" type="application/atom+xml" />
     
 
     
@@ -135,14 +135,14 @@
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-website/hexo-01" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-website/hexo-04" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
                 
     
         <h1 class="article-title" itemprop="name">
-        【入门】使用hexo快速搭建本地blog
+        Hexo折腾记——自动部署篇
         </h1>
     
 
@@ -152,8 +152,8 @@
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/2018/04/06/website/hexo-01/" class="article-date">
-            <time datetime="2018-04-06T09:00:59.909Z" itemprop="datePublished">2018-04-06</time>
+        <a href="/website/hexo-04/" class="article-date">
+            <time datetime="2018-04-07T04:03:28.000Z" itemprop="datePublished">2018-04-07</time>
         </a>
     </div>
 
@@ -167,41 +167,18 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p>国际惯例，先上图</p>
-<p><img src="/../../img/website/hexo-01-01.jpg" alt=""></p>
-<p><strong>1.安装Git Bash</strong></p>
-<p>到<a href="https://gitforwindows.org/" target="_blank" rel="noopener">这里</a>下载Git Bash，一路回车</p>
-<p>安装好后，打开git Bash</p>
-<p>输入<code>git version</code>验证是否成功</p>
-<p><img src="/../../img/website/hexo-01-02.jpg" alt=""></p>
-<p><strong>2.安装node.js</strong></p>
-<p>在<a href="https://nodejs.org/en/" target="_blank" rel="noopener">这里</a>下载(LTS就是Long Term Support，current都可以)，安装过程中记得勾选Add to Path，这样可以自动配置环境变量，，打开<code>Git Bash</code>，输入<code>node -v</code></p>
-<p><img src="/../../img/website/hexo-01-03.jpg" alt=""></p>
-<p><strong>3.安装hexo</strong></p>
-<p>在你想要存放hexo的位置建立一个文件夹，例如：<code>d:/hexo</code></p>
-<p>在<code>Git Bash</code>中输入<code>cd d:/hexo</code>进入该目录</p>
-<p>输入安装hexo的命令</p>
-<p><code>npm i -g hexo</code></p>
-<p>经过一段时间的等待，会出现下面的信息</p>
-<p><code>INFO  Start blogging with Hexo!</code>说明安装成功</p>
-<p>初始化hexo：<code>hexo init</code>，在你建立的目录会出现一些文件</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">node_modules：是依赖包</span><br><span class="line">public：存放的是生成的页面</span><br><span class="line">scaffolds：命令生成文章等的模板</span><br><span class="line">source：用命令创建的各种文章</span><br><span class="line">themes：主题</span><br><span class="line">_config.yml：整个博客的配置</span><br><span class="line">db.json：source解析所得到的</span><br><span class="line">package.json：项目所需模块项目的配置信息</span><br></pre></td></tr></table></figure>
-<p><strong>4.运行hexo</strong></p>
-<p>在<code>Git Bash</code>中输入以下命令</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo generate</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-<p>打开浏览器，输入<code>localhost:4000</code></p>
-<p>tip:其中端口可以指定，<code>hexo server -p 5000</code></p>
-<p><strong>5.Write Blog</strong></p>
-<p>可以直接在git中建立文章（具体可参考<a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">这里</a> ），也可以直接使用typora写文章，</p>
-<p>这里仅以typora为例：</p>
-<p>百度搜索typora，下载安装，</p>
-<p>打开你的hexo目录，进入<code>source/_post</code>建立一个txt文件，将后缀更改为md，(如果文件没有后缀，百度搜索windows扩展名)，打开就可以输入你想写的文章了，保存后，直接在<code>Git Bash</code>中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure>
-<p>就可以看见你的文章了，</p>
-<p>如果想引用图片，在<code>source</code>目录下建立一个文件夹，例如<code>img</code>，在文章中插入链接即可，像下面这样</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](/img/image.jpg) # 注意前面需要加上/</span><br></pre></td></tr></table></figure>
-<p><code>image.jpg</code>为你的图片的全名称</p>
-<p><code>全文完2018年4月6日15:13:50</code></p>
+            <p><img src="/../../img/website/hexo-04-01.jpg" alt=""></p>
+<h3 id="目标"><a href="#目标" class="headerlink" title="目标:"></a>目标:</h3><p>写完一键上传并部署。(一个命令完成)</p>
+<h3 id="详细流程"><a href="#详细流程" class="headerlink" title="详细流程:"></a>详细流程:</h3><p>上传图片至七牛，上传 deploy 文件至Github公开库 以及 博客源代码 至Github 私有库，Daocloud 检测到commit 自动构建镜像并自动更新应用。</p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现:"></a>实现:</h3><p>​    1.在public目录下放置Dockerfile文件:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FROM daocloud.io/nginx</span><br><span class="line">COPY ./ /usr/share/nginx/html</span><br></pre></td></tr></table></figure>
+<p>​    2.在Daocloud里，创建新的代码构建，并设置成检测到commit就自动构建，再用这个镜像创建新应用，并设置自动更新</p>
+<p>​    3.hexo根目录下创建 update.sh</p>
+<p>(Mac/Linux下需修改执行权限: sudo chown 755 ./update.sh， Windows 需改成对应的bat脚本)</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> author: joway</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果参数个数不等于0</span></span><br><span class="line">if test $# -gt 0</span><br><span class="line">then</span><br><span class="line">if test $1 = '-img'</span><br><span class="line">then</span><br><span class="line">cd ./source/photos/</span><br><span class="line">node photo-tool.js</span><br><span class="line">cd ../../</span><br><span class="line">echo 'Upload complete'</span><br><span class="line">else</span><br><span class="line">echo 'Parameter error'</span><br><span class="line">fi</span><br><span class="line">else</span><br><span class="line">echo 'No image needs upload'</span><br><span class="line">fi</span><br><span class="line">hexo clean</span><br><span class="line">hexo g &amp;&amp; gulp</span><br><span class="line">hexo deploy</span><br><span class="line">git add .</span><br><span class="line">git commit -m 'update backup'</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<p>命令使用:</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 需要上传图片</span></span><br><span class="line">./update.sh -img  </span><br><span class="line"><span class="meta">#</span><span class="bash">图片没改动， 只上传站点文件</span></span><br><span class="line">./update.sh</span><br></pre></td></tr></table></figure>
+<p><a href="https://yq.aliyun.com/articles/8609" target="_blank" rel="noopener">原文地址</a></p>
 
         </div>
         <footer class="article-footer">
@@ -209,7 +186,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/04/06/website/hexo-01/" data-id="cjfovzjc40003w8dmdq7caixq" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/website/hexo-04/" data-id="cjfp8gj8l0007zgdmopauj0dw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -346,16 +323,22 @@
         
 <nav id="article-nav">
     
-        <a href="/2018/04/06/python/python-01/" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/website/hexo-05/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            Python装饰器
+            从零开始制作 Hexo 主题
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
+    
+        <a href="/website/hexo-03/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Hexo折腾记——性能优化篇</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
     
 </nav>
 
@@ -372,7 +355,47 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/04/07/website/hexo-05/" class="thumbnail">
+                            <a href="/website/hexo-07/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-07-01.jpg)" alt="【入门-&gt;进阶ing】使用hexo快速搭建本地blog" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/website/hexo-07/" class="title">【入门-&gt;进阶ing】使用hexo快速搭建本地blog</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T10:14:26.170Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/website/hexo-06/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-06-01.jpg)" alt="浅谈模板引擎" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/website/hexo-06/" class="title">浅谈模板引擎</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T05:12:08.429Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/website/hexo-05/" class="thumbnail">
     
     
         <span style="background-image:url(/../../img/website/hexo-05-01.jpg)" alt="从零开始制作 Hexo 主题" class="thumbnail-image"></span>
@@ -384,7 +407,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/07/website/hexo-05/" class="title">从零开始制作 Hexo 主题</a></p>
+                            <p class="item-title"><a href="/website/hexo-05/" class="title">从零开始制作 Hexo 主题</a></p>
                             <p class="item-date"><time datetime="2018-04-07T04:17:14.000Z" itemprop="datePublished">2018-04-07</time></p>
                         </div>
                     </li>
@@ -392,7 +415,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/04/07/website/hexo-04/" class="thumbnail">
+                            <a href="/website/hexo-04/" class="thumbnail">
     
     
         <span style="background-image:url(/../../img/website/hexo-04-01.jpg)" alt="Hexo折腾记——自动部署篇" class="thumbnail-image"></span>
@@ -404,7 +427,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/07/website/hexo-04/" class="title">Hexo折腾记——自动部署篇</a></p>
+                            <p class="item-title"><a href="/website/hexo-04/" class="title">Hexo折腾记——自动部署篇</a></p>
                             <p class="item-date"><time datetime="2018-04-07T04:03:28.000Z" itemprop="datePublished">2018-04-07</time></p>
                         </div>
                     </li>
@@ -412,7 +435,7 @@
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/2018/04/07/website/hexo-03/" class="thumbnail">
+                            <a href="/website/hexo-03/" class="thumbnail">
     
     
         <span style="background-image:url(/../../img/website/hexo-03-01.jpg)" alt="Hexo折腾记——性能优化篇" class="thumbnail-image"></span>
@@ -424,48 +447,8 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/07/website/hexo-03/" class="title">Hexo折腾记——性能优化篇</a></p>
+                            <p class="item-title"><a href="/website/hexo-03/" class="title">Hexo折腾记——性能优化篇</a></p>
                             <p class="item-date"><time datetime="2018-04-07T04:03:12.000Z" itemprop="datePublished">2018-04-07</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/07/website/hexo-02/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../img/website/hexo-02-01.jpg)" alt="Hexo折腾记——基本配置篇" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/07/website/hexo-02/" class="title">Hexo折腾记——基本配置篇</a></p>
-                            <p class="item-date"><time datetime="2018-04-07T02:50:23.000Z" itemprop="datePublished">2018-04-07</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/07/ubuntu/ubuntu常见错误/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../img/ubuntu/ubuntu-01-01.jpg)" alt="ubuntu常见错误" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/07/ubuntu/ubuntu常见错误/" class="title">ubuntu常见错误</a></p>
-                            <p class="item-date"><time datetime="2018-04-07T02:36:33.888Z" itemprop="datePublished">2018-04-07</time></p>
                         </div>
                     </li>
                 
@@ -481,7 +464,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">7</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">9</span></li></ul>
         </div>
     </div>
 
@@ -491,7 +474,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题/">博客主题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题/">博客主题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -501,7 +484,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题/" style="font-size: 10px;">博客主题</a> <a href="/tags/博客搭建/" style="font-size: 15px;">博客搭建</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
+            <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题/" style="font-size: 10px;">博客主题</a> <a href="/tags/博客搭建/" style="font-size: 15px;">博客搭建</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
         </div>
     </div>
 
@@ -549,7 +532,7 @@
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/2018/04/06/website/hexo-01/';
+    var disqus_url = 'http://yoursite.com/website/hexo-04/';
     
     (function() {
     var dsq = document.createElement('script');
