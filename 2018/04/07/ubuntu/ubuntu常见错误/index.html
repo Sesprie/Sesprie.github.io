@@ -17,12 +17,12 @@
 <meta property="og:site_name" content="Sesprie 驿站">
 <meta property="og:description" content="1. Could not get lock /var/lib/dpkg/lock通过终端安装程序sudo apt-get install xxx时出错：E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)E: Unable to lock the administration">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/ubuntu/ubuntu-01.jpg">
-<meta property="og:updated_time" content="2018-04-07T02:38:06.693Z">
+<meta property="og:image" content="http://yoursite.com/img/ubuntu/ubuntu-01-01.jpg">
+<meta property="og:updated_time" content="2018-04-07T04:30:46.561Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu常见错误">
 <meta name="twitter:description" content="1. Could not get lock /var/lib/dpkg/lock通过终端安装程序sudo apt-get install xxx时出错：E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)E: Unable to lock the administration">
-<meta name="twitter:image" content="http://yoursite.com/img/ubuntu/ubuntu-01.jpg">
+<meta name="twitter:image" content="http://yoursite.com/img/ubuntu/ubuntu-01-01.jpg">
     
 
     
@@ -167,7 +167,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/../../img/ubuntu/ubuntu-01.jpg" alt=""></p>
+            <p><img src="/../../img/ubuntu/ubuntu-01-01.jpg" alt=""></p>
 <hr>
 <p><strong>1.</strong> <code>Could not get lock /var/lib/dpkg/lock</code><br>通过终端安装程序<code>sudo apt-get install xxx</code>时出错：<br><code>E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)</code><br><code>E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?</code><br>出现这个问题可能是有另外一个程序正在运行，导致资源被锁不可用。而导致资源被锁的原因可能是上次运行安装或更新时没有正常完成，进而出现此状况，解决的办法其实很简单：<br>在终端中敲入以下两句<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo rm /var/lib/dpkg/lock</span><br></pre></td></tr></table></figure></p>
 <p>再试着安装，问题解决。</p>
@@ -179,7 +179,7 @@
 
 
 
-    <a data-url="http://yoursite.com/2018/04/07/ubuntu/ubuntu常见错误/" data-id="cjforvsyt0001owdmzgpjdf0b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2018/04/07/ubuntu/ubuntu常见错误/" data-id="cjfovzjbu0000w8dmv796375d" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -316,6 +316,16 @@
         
 <nav id="article-nav">
     
+        <a href="/2018/04/07/website/hexo-02/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            Hexo折腾记——基本配置篇
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/2018/04/06/python/python-01/" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
@@ -338,10 +348,90 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2018/04/07/website/hexo-05/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-05-01.jpg)" alt="从零开始制作 Hexo 主题" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/07/website/hexo-05/" class="title">从零开始制作 Hexo 主题</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T04:17:14.000Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/07/website/hexo-04/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-04-01.jpg)" alt="Hexo折腾记——自动部署篇" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/07/website/hexo-04/" class="title">Hexo折腾记——自动部署篇</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T04:03:28.000Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/07/website/hexo-03/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-03-01.jpg)" alt="Hexo折腾记——性能优化篇" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/07/website/hexo-03/" class="title">Hexo折腾记——性能优化篇</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T04:03:12.000Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/07/website/hexo-02/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-02-01.jpg)" alt="Hexo折腾记——基本配置篇" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/07/website/hexo-02/" class="title">Hexo折腾记——基本配置篇</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T02:50:23.000Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2018/04/07/ubuntu/ubuntu常见错误/" class="thumbnail">
     
     
-        <span style="background-image:url(/../../img/ubuntu/ubuntu-01.jpg)" alt="ubuntu常见错误" class="thumbnail-image"></span>
+        <span style="background-image:url(/../../img/ubuntu/ubuntu-01-01.jpg)" alt="ubuntu常见错误" class="thumbnail-image"></span>
     
     
 </a>
@@ -352,46 +442,6 @@
                             <p class="item-category"></p>
                             <p class="item-title"><a href="/2018/04/07/ubuntu/ubuntu常见错误/" class="title">ubuntu常见错误</a></p>
                             <p class="item-date"><time datetime="2018-04-07T02:36:33.888Z" itemprop="datePublished">2018-04-07</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/06/python/python-01/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../img/python/python-01.jpg)" alt="Python装饰器" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/06/python/python-01/" class="title">Python装饰器</a></p>
-                            <p class="item-date"><time datetime="2018-04-06T09:35:29.680Z" itemprop="datePublished">2018-04-06</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2018/04/06/website/hexo-01/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../img/hexo/hexo-03.jpg)" alt="【入门】使用hexo快速搭建本地blog" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/2018/04/06/website/hexo-01/" class="title">【入门】使用hexo快速搭建本地blog</a></p>
-                            <p class="item-date"><time datetime="2018-04-06T09:00:59.909Z" itemprop="datePublished">2018-04-06</time></p>
                         </div>
                     </li>
                 
@@ -407,7 +457,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">3</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">7</span></li></ul>
         </div>
     </div>
 
@@ -417,7 +467,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题/">博客主题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -427,7 +477,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客搭建/" style="font-size: 10px;">博客搭建</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
+            <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题/" style="font-size: 10px;">博客主题</a> <a href="/tags/博客搭建/" style="font-size: 15px;">博客搭建</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
         </div>
     </div>
 

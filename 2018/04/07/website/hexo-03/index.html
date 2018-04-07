@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    
+    <title>Hexo折腾记——性能优化篇 | Sesprie 驿站</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+        <meta name="keywords" content="hexo,博客搭建" />
+    
+    <meta name="description" content="折腾Hexo的本来目的就是为了学习把性能优化到极致，由于水平有限，这里牵涉到的所谓的性能优化仅仅只是一些表面工夫，并不牵涉非常细节的前端性能。 另外，由于我朝特殊的网络环境，我使用的谷歌分析，以及Disqus 均会导致出现因时因地因运营商而异的发抽状况，故而所有速度测试均在排除这些干扰下进行的。 静态文件压缩静态文件包括: html,css,js,images . 我才用了gulp来跑自动压缩任">
+<meta name="keywords" content="hexo,博客搭建">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo折腾记——性能优化篇">
+<meta property="og:url" content="http://yoursite.com/2018/04/07/website/hexo-03/index.html">
+<meta property="og:site_name" content="Sesprie 驿站">
+<meta property="og:description" content="折腾Hexo的本来目的就是为了学习把性能优化到极致，由于水平有限，这里牵涉到的所谓的性能优化仅仅只是一些表面工夫，并不牵涉非常细节的前端性能。 另外，由于我朝特殊的网络环境，我使用的谷歌分析，以及Disqus 均会导致出现因时因地因运营商而异的发抽状况，故而所有速度测试均在排除这些干扰下进行的。 静态文件压缩静态文件包括: html,css,js,images . 我才用了gulp来跑自动压缩任">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/img/website/hexo-03-01.jpg">
+<meta property="og:updated_time" content="2018-04-07T04:28:32.689Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo折腾记——性能优化篇">
+<meta name="twitter:description" content="折腾Hexo的本来目的就是为了学习把性能优化到极致，由于水平有限，这里牵涉到的所谓的性能优化仅仅只是一些表面工夫，并不牵涉非常细节的前端性能。 另外，由于我朝特殊的网络环境，我使用的谷歌分析，以及Disqus 均会导致出现因时因地因运营商而异的发抽状况，故而所有速度测试均在排除这些干扰下进行的。 静态文件压缩静态文件包括: html,css,js,images . 我才用了gulp来跑自动压缩任">
+<meta name="twitter:image" content="http://yoursite.com/img/website/hexo-03-01.jpg">
+    
+
+    
+        <link rel="alternate" href="/" title="Sesprie 驿站" type="application/atom+xml" />
+    
+
+    
+
+    <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/libs/titillium-web/styles.css">
+    <link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+
+    <script src="/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+    
+        <link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+    
+    
+        <link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+    
+    
+    
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                        
+                                    
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/about/index.html">关于</a>
+                                </li>
+                            
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    未分类
+    </h1>
+</div>
+                        <div class="main-body-content">
+                            <article id="post-website/hexo-03" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        Hexo折腾记——性能优化篇
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+    <div class="article-date">
+        <a href="/2018/04/07/website/hexo-03/" class="article-date">
+            <time datetime="2018-04-07T04:03:12.000Z" itemprop="datePublished">2018-04-07</time>
+        </a>
+    </div>
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/hexo/">hexo</a>, <a class="tag-link" href="/tags/博客搭建/">博客搭建</a>
+    </div>
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            <p><img src="/../../img/website/hexo-03-01.jpg" alt=""></p>
+<p>折腾Hexo的本来目的就是为了学习把性能优化到极致，由于水平有限，这里牵涉到的所谓的性能优化仅仅只是一些表面工夫，并不牵涉非常细节的前端性能。</p>
+<p>另外，由于我朝特殊的网络环境，我使用的谷歌分析，以及Disqus 均会导致出现因时因地因运营商而异的发抽状况，故而所有速度测试均在排除这些干扰下进行的。</p>
+<h3 id="静态文件压缩"><a href="#静态文件压缩" class="headerlink" title="静态文件压缩"></a>静态文件压缩</h3><p>静态文件包括: html,css,js,images . 我才用了gulp来跑自动压缩任务 。具体方法如下:</p>
+<p>1.npm 安装如下工具, 方法皆为 : npm install xxx –save</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">"gulp": "^3.9.1",</span><br><span class="line">"gulp-htmlclean": "^2.7.6",</span><br><span class="line">"gulp-htmlmin": "^1.3.0",</span><br><span class="line">"gulp-imagemin": "^2.4.0",</span><br><span class="line">"gulp-minify-css": "^1.2.4",</span><br><span class="line">"gulp-uglify": "^1.5.3",</span><br></pre></td></tr></table></figure>
+<p>2.建立 gulpfile.js 文件</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> gulp = <span class="built_in">require</span>(<span class="string">'gulp'</span>);</span><br><span class="line"><span class="keyword">var</span> minifycss = <span class="built_in">require</span>(<span class="string">'gulp-minify-css'</span>);</span><br><span class="line"><span class="keyword">var</span> uglify = <span class="built_in">require</span>(<span class="string">'gulp-uglify'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlmin = <span class="built_in">require</span>(<span class="string">'gulp-htmlmin'</span>);</span><br><span class="line"><span class="keyword">var</span> htmlclean = <span class="built_in">require</span>(<span class="string">'gulp-htmlclean'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取 gulp-imagemin 模块</span></span><br><span class="line"><span class="keyword">var</span> imagemin = <span class="built_in">require</span>(<span class="string">'gulp-imagemin'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 压缩 public 目录 css</span></span><br><span class="line">gulp.task(<span class="string">'minify-css'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.css'</span>)</span><br><span class="line">        .pipe(minifycss())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public 目录 html</span></span><br><span class="line">gulp.task(<span class="string">'minify-html'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.html'</span>)</span><br><span class="line">        .pipe(htmlclean())</span><br><span class="line">        .pipe(htmlmin(&#123;</span><br><span class="line">        removeComments: <span class="literal">true</span>,</span><br><span class="line">        minifyJS: <span class="literal">true</span>,</span><br><span class="line">        minifyCSS: <span class="literal">true</span>,</span><br><span class="line">        minifyURLs: <span class="literal">true</span>,</span><br><span class="line">    &#125;))</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>))</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 压缩 public/js 目录 js</span></span><br><span class="line">gulp.task(<span class="string">'minify-js'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> gulp.src(<span class="string">'./public/**/*.js'</span>)</span><br><span class="line">        .pipe(uglify())</span><br><span class="line">        .pipe(gulp.dest(<span class="string">'./public'</span>));</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 压缩图片任务</span></span><br><span class="line"><span class="comment">// 在命令行输入 gulp images 启动此任务</span></span><br><span class="line">gulp.task(<span class="string">'images'</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">// 1. 找到图片</span></span><br><span class="line">    gulp.src(<span class="string">'./photos/*.*'</span>)</span><br><span class="line">    <span class="comment">// 2. 压缩图片</span></span><br><span class="line">        .pipe(imagemin(&#123;</span><br><span class="line">        progressive: <span class="literal">true</span></span><br><span class="line">    &#125;))</span><br><span class="line">    <span class="comment">// 3. 另存图片</span></span><br><span class="line">        .pipe(gulp.dest(<span class="string">'dist/images'</span>))</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// 执行 gulp 命令时执行的任务</span></span><br><span class="line">gulp.task(<span class="string">'default'</span>, [</span><br><span class="line">    <span class="string">'minify-html'</span>,<span class="string">'minify-css'</span>,<span class="string">'minify-js'</span>,<span class="string">'images'</span></span><br><span class="line">]);</span><br></pre></td></tr></table></figure>
+<p>注意， 修改上面的各个目录为你的真实目录， ** 代表0或多个子目录</p>
+<p>3.执行 gulp ，即可自动压缩所有静态文件</p>
+<h3 id="CDN-接入"><a href="#CDN-接入" class="headerlink" title="CDN 接入"></a>CDN 接入</h3><p>上面的静态文件压缩幅度有限，要先提升下载速率还需要CDN的支持 。 理论上最佳方案是把所有静态文件都放在CDN上，但是由于hexo各处都在调用内部的js/css，如果需要改动，工程量会比较大，后期维护也不是很方便。不知道以后Hexo会不会原生提供一个配置静态资源地址的选项。</p>
+<p>所以我这里只将图片放在了七牛CDN上，hexo 有一个七牛的插件 : hexo-qiniu-sync 。 但是不知道为什么， 我在我电脑上跑不来这个，我看网上也有人说这个插件有许多bug，于是我就自己写了个脚本(本来想写插件，但是并没有研究过hexo的插件该如何写，所以暂时放弃了，后期有时间尝试下吧)。</p>
+<p>我的需求很简单，我有一个相册的页面，里面可能会放许多图片，我只想要一个脚本，能过一键上传所有图片然后把url全部写进我的相册界面里。具体实现思路参见 <a href="">Hexo 折腾记(基本配置篇)</a> 。</p>
+<p>一键上传所有文件至七牛的Node 脚本在Github上: <code>https://github.com/joway/qiniu_upload_node</code></p>
+<h3 id="InstantClick-黑科技"><a href="#InstantClick-黑科技" class="headerlink" title="InstantClick 黑科技"></a>InstantClick 黑科技</h3><p>说到性能优化，有一个黑科技虽然不是特别优雅，但是提升的速度却是立杆见影且惊人的，那就是 InstantClick 。</p>
+<p>InstantClick 的思路非常巧妙，它利用鼠标点击链接前的短暂时间(统计说是平均400ms)进行预加载，从而在感观上实现了迅速打开页面的效果。当你在打开页面的时候，其实页面已经加载到本地了，也就会很快能个完成渲染。</p>
+<p>InstantClick 并不能滥用，许多js无法与它兼容，比如 谷歌分析，百度统计，另外还有fancybox 。故而它有两种启用方式:</p>
+<p><strong>白名单方式:</strong></p>
+<p>初始化:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"instantclick.min.js"</span>data-no-instant&gt;&lt;/script&gt;</span><br><span class="line">&lt;script data-no-instant&gt;InstantClick.init(<span class="literal">true</span>);&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>针对具体每个链接启动:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/blog/"</span> <span class="attr">data-instant</span>&gt;</span>Blog<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>黑名单方式:</strong></p>
+<p>初始化，以及解决部分js无法加载的问题:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"/js/instantclick.min.js"</span> data-no-instant&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script data-no-instant&gt;</span><br><span class="line">InstantClick.on(<span class="string">'change'</span>, <span class="function"><span class="keyword">function</span>(<span class="params">isInitialLoad</span>) </span>&#123;</span><br><span class="line"><span class="keyword">if</span> (isInitialLoad === <span class="literal">false</span>) &#123;</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> MathJax !== <span class="string">'undefined'</span>) <span class="comment">// support MathJax</span></span><br><span class="line">MathJax.Hub.Queue([<span class="string">"Typeset"</span>,MathJax.Hub]);</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> prettyPrint !== <span class="string">'undefined'</span>) <span class="comment">// support google code prettify</span></span><br><span class="line">prettyPrint();</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> _hmt !== <span class="string">'undefined'</span>)  <span class="comment">// support 百度统计</span></span><br><span class="line">_hmt.push([<span class="string">'_trackPageview'</span>, location.pathname + location.search]);</span><br><span class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> ga !== <span class="string">'undefined'</span>)  <span class="comment">// support google analytics</span></span><br><span class="line">ga(<span class="string">'send'</span>, <span class="string">'pageview'</span>, location.pathname + location.search);</span><br><span class="line">&#125;</span><br><span class="line">&#125;);</span><br><span class="line">InstantClick.init();</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这时候对于所有链接都开启 预加载模式，但是可以针对部分链接假如黑名单:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=<span class="string">"/blog/"</span> data-no-instant&gt;Blog&lt;<span class="regexp">/a&gt;</span></span><br></pre></td></tr></table></figure>
+<p>这里我遇到的一个坑是，我的相册使用了fancybox，而对于InstantClick死活无法解决fancybox的问题(网上也没解决方案)，虽然我可以通过指定data-no-instant来达到不预加载的目的，但是hexo对于每个同级链接都是一样对待的，我如何让它单单对于相册不进行预加载呢?</p>
+<p>我能够想到的方法就是对导航栏的每一个url指定一个以其中文名(暂时不映射成英文)命名的id值，然后待页面渲染完了以后，对id值为’相册’的元素添加 data-no-instant 属性:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#相册"</span>).attr(<span class="string">"data-no-instant"</span>,<span class="string">''</span>);</span><br></pre></td></tr></table></figure>
+<p>有些时候这种加黑名单的方法也没用，那么就用最后一招，强制刷新（自己调试出来的，略土。。） :</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.getElementById(<span class="string">'相册'</span>).onclick = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">location.href = <span class="built_in">document</span>.getElementById(<span class="string">'相册'</span>).href;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Nginx-优化配置"><a href="#Nginx-优化配置" class="headerlink" title="Nginx 优化配置"></a>Nginx 优化配置</h3><p>Gzip压缩:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">http &#123;</span><br><span class="line">    gzip               on;</span><br><span class="line">    gzip_vary          on;</span><br><span class="line"></span><br><span class="line">    gzip_comp_level    <span class="number">6</span>;</span><br><span class="line">    gzip_buffers       <span class="number">16</span> <span class="number">8</span>k;</span><br><span class="line"></span><br><span class="line">    gzip_min_length    <span class="number">1000</span>;</span><br><span class="line">    gzip_proxied       any;</span><br><span class="line">    gzip_disable       <span class="string">"msie6"</span>;</span><br><span class="line"></span><br><span class="line">    gzip_http_version  <span class="number">1.0</span>;</span><br><span class="line"></span><br><span class="line">    gzip_types         text/plain text/css application/json application/x-javascript text/xml application/xml application/xml+rss text/javascript application/javascript;</span><br><span class="line">    ... ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="搜索引擎优化-SEO"><a href="#搜索引擎优化-SEO" class="headerlink" title="搜索引擎优化(SEO)"></a>搜索引擎优化(SEO)</h3><p>添加百度主动推送代码，让搜索引擎最快发现文章 .</p>
+<p>方法: 在 &lt;博客根目录&gt;/themes/yilia/layout/_partial/article.ejs 的尾部评论位置, 添加:</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;% <span class="keyword">if</span> (!index)&#123; %&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> bp = <span class="built_in">document</span>.createElement(<span class="string">'script'</span>);</span><br><span class="line">    bp.src = <span class="string">'//push.zhanzhang.baidu.com/push.js'</span>;</span><br><span class="line">    <span class="keyword">var</span> s = <span class="built_in">document</span>.getElementsByTagName(<span class="string">"script"</span>)[<span class="number">0</span>];</span><br><span class="line">    s.parentNode.insertBefore(bp, s);</span><br><span class="line">&#125;)();</span><br><span class="line">&lt;<span class="regexp">/script&gt;     </span></span><br><span class="line"><span class="regexp">&lt;% &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<p>之后，每次用户访问界面，都会去调用推送代码</p>
+<p><a href="https://yq.aliyun.com/articles/8608" target="_blank" rel="noopener">原文地址</a></p>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="http://yoursite.com/2018/04/07/website/hexo-03/" data-id="cjfovzjc60005w8dm217y0u7j" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+    
+    </section>
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="google-plus" href="/" target="_blank">
+                        <i class="icon fa fa-google-plus"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+        <a href="/2018/04/07/website/hexo-04/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            Hexo折腾记——自动部署篇
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
+    
+        <a href="/2018/04/07/website/hexo-02/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Hexo折腾记——基本配置篇</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/07/website/hexo-05/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-05-01.jpg)" alt="从零开始制作 Hexo 主题" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/07/website/hexo-05/" class="title">从零开始制作 Hexo 主题</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T04:17:14.000Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/07/website/hexo-04/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-04-01.jpg)" alt="Hexo折腾记——自动部署篇" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/07/website/hexo-04/" class="title">Hexo折腾记——自动部署篇</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T04:03:28.000Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/07/website/hexo-03/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-03-01.jpg)" alt="Hexo折腾记——性能优化篇" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/07/website/hexo-03/" class="title">Hexo折腾记——性能优化篇</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T04:03:12.000Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/07/website/hexo-02/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/website/hexo-02-01.jpg)" alt="Hexo折腾记——基本配置篇" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/07/website/hexo-02/" class="title">Hexo折腾记——基本配置篇</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T02:50:23.000Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2018/04/07/ubuntu/ubuntu常见错误/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../img/ubuntu/ubuntu-01-01.jpg)" alt="ubuntu常见错误" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2018/04/07/ubuntu/ubuntu常见错误/" class="title">ubuntu常见错误</a></p>
+                            <p class="item-date"><time datetime="2018-04-07T02:36:33.888Z" itemprop="datePublished">2018-04-07</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">7</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget">
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题/">博客主题</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签云</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题/" style="font-size: 10px;">博客主题</a> <a href="/tags/博客搭建/" style="font-size: 15px;">博客搭建</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2018 Sesprie</p>
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+        
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'http://yoursite.com/2018/04/07/website/hexo-03/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+    
+        <script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-share.min.js"></script>
+        <script src="/libs/lightgallery/js/lg-video.min.js"></script>
+    
+    
+        <script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+    
+    
+
+
+
+<!-- Custom Scripts -->
+<script src="/js/main.js"></script>
+
+    </div>
+</body>
+</html>
