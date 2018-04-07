@@ -22,12 +22,12 @@
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="1. Could not get lock /var/lib/dpkg/lock通过终端安装程序sudo apt-get install xxx时出错：E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)E: Unable to lock the administration">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/img/ubuntu/ubuntu-01-01.jpg">
-<meta property="og:updated_time" content="2018-04-07T04:30:46.561Z">
+<meta property="og:image" content="http://yoursite.com/src/img/ubuntu/ubuntu-01-01.jpg">
+<meta property="og:updated_time" content="2018-04-07T13:47:17.177Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ubuntu常见错误">
 <meta name="twitter:description" content="1. Could not get lock /var/lib/dpkg/lock通过终端安装程序sudo apt-get install xxx时出错：E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)E: Unable to lock the administration">
-<meta name="twitter:image" content="http://yoursite.com/img/ubuntu/ubuntu-01-01.jpg">
+<meta name="twitter:image" content="http://yoursite.com/src/img/ubuntu/ubuntu-01-01.jpg">
     
 
     
@@ -174,7 +174,7 @@
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/../../img/ubuntu/ubuntu-01-01.jpg" alt=""></p>
+            <p><img src="/../../src/img/ubuntu/ubuntu-01-01.jpg" alt=""></p>
 <hr>
 <p><strong>1.</strong> <code>Could not get lock /var/lib/dpkg/lock</code><br>通过终端安装程序<code>sudo apt-get install xxx</code>时出错：<br><code>E: Could not get lock /var/lib/dpkg/lock - open (11: Resource temporarily unavailable)</code><br><code>E: Unable to lock the administration directory (/var/lib/dpkg/), is another process using it?</code><br>出现这个问题可能是有另外一个程序正在运行，导致资源被锁不可用。而导致资源被锁的原因可能是上次运行安装或更新时没有正常完成，进而出现此状况，解决的办法其实很简单：<br>在终端中敲入以下两句<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo rm /var/cache/apt/archives/lock</span><br><span class="line">sudo rm /var/lib/dpkg/lock</span><br></pre></td></tr></table></figure></p>
 <p>再试着安装，问题解决。</p>
@@ -186,7 +186,7 @@
 
 
 
-    <a data-url="http://yoursite.com/ubuntu/ubuntu常见错误/" data-id="cjfpfhpxj0001qkdm46fe4gsn" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/ubuntu/ubuntu常见错误/" data-id="cjfpfom8c0000c4dmflbisw13" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -398,7 +398,7 @@
                             <a href="/website/hexo-08/" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/website/hexo-08-01.jpg)" alt="为右键设置点击出现桃心效果" class="thumbnail-image"></span>
+        <span style="background-image:url(/../../src/img/website/hexo-08-01.jpg)" alt="为hexo主题添加右键桃心效果" class="thumbnail-image"></span>
     
     
 </a>
@@ -407,7 +407,7 @@
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/website/hexo-08/" class="title">为右键设置点击出现桃心效果</a></p>
+                            <p class="item-title"><a href="/website/hexo-08/" class="title">为hexo主题添加右键桃心效果</a></p>
                             <p class="item-date"><time datetime="2018-04-07T12:03:19.594Z" itemprop="datePublished">2018-04-07</time></p>
                         </div>
                     </li>
