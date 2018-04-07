@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-6592393698895794",
+    enable_page_level_ads: true
+  });
+</script>
     <meta charset="utf-8">
     
     <title>Hexo折腾记——自动部署篇 | Sesprie</title>
@@ -182,9 +188,9 @@
 <p>​    2.在Daocloud里，创建新的代码构建，并设置成检测到commit就自动构建，再用这个镜像创建新应用，并设置自动更新</p>
 <p>​    3.hexo根目录下创建 update.sh</p>
 <p>(Mac/Linux下需修改执行权限: sudo chown 755 ./update.sh， Windows 需改成对应的bat脚本)</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span>!/bin/sh</span><br><span class="line"><span class="meta">#</span> author: joway</span><br><span class="line"><span class="meta">#</span> 如果参数个数不等于0</span><br><span class="line">if test $# -gt 0</span><br><span class="line">then</span><br><span class="line">if test $1 = '-img'</span><br><span class="line">then</span><br><span class="line">cd ./source/photos/</span><br><span class="line">node photo-tool.js</span><br><span class="line">cd ../../</span><br><span class="line">echo 'Upload complete'</span><br><span class="line">else</span><br><span class="line">echo 'Parameter error'</span><br><span class="line">fi</span><br><span class="line">else</span><br><span class="line">echo 'No image needs upload'</span><br><span class="line">fi</span><br><span class="line">hexo clean</span><br><span class="line">hexo g &amp;&amp; gulp</span><br><span class="line">hexo deploy</span><br><span class="line">git add .</span><br><span class="line">git commit -m 'update backup'</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> author: joway</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> 如果参数个数不等于0</span></span><br><span class="line">if test $# -gt 0</span><br><span class="line">then</span><br><span class="line">if test $1 = '-img'</span><br><span class="line">then</span><br><span class="line">cd ./source/photos/</span><br><span class="line">node photo-tool.js</span><br><span class="line">cd ../../</span><br><span class="line">echo 'Upload complete'</span><br><span class="line">else</span><br><span class="line">echo 'Parameter error'</span><br><span class="line">fi</span><br><span class="line">else</span><br><span class="line">echo 'No image needs upload'</span><br><span class="line">fi</span><br><span class="line">hexo clean</span><br><span class="line">hexo g &amp;&amp; gulp</span><br><span class="line">hexo deploy</span><br><span class="line">git add .</span><br><span class="line">git commit -m 'update backup'</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 <p>命令使用:</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span> 需要上传图片</span><br><span class="line">./update.sh -img  </span><br><span class="line"><span class="meta">#</span>图片没改动， 只上传站点文件</span><br><span class="line">./update.sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> 需要上传图片</span></span><br><span class="line">./update.sh -img  </span><br><span class="line"><span class="meta">#</span><span class="bash">图片没改动， 只上传站点文件</span></span><br><span class="line">./update.sh</span><br></pre></td></tr></table></figure>
 <p><a href="https://yq.aliyun.com/articles/8609" target="_blank" rel="noopener">原文地址</a></p>
 
         </div>
@@ -193,7 +199,7 @@
 
 
 
-    <a data-url="http://yoursite.com/website/hexo-04/" data-id="cjfpjmk590007j4dmv6pllyrp" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/website/hexo-04/" data-id="cjfpkge020008uwdm2ynw16ep" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
