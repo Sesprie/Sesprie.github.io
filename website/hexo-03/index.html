@@ -199,7 +199,7 @@
 <p>InstantClick 并不能滥用，许多js无法与它兼容，比如 谷歌分析，百度统计，另外还有fancybox 。故而它有两种启用方式:</p>
 <p><strong>白名单方式:</strong></p>
 <p>初始化:</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"instantclick.min.js"</span>data-no-instant&gt;&lt;/script&gt;</span><br><span class="line">&lt;script data-no-instant&gt;InstantClick.init(<span class="literal">true</span>);&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"instantclick.min.js"</span>data-no-instant&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;script data-no-instant&gt;InstantClick.init(<span class="literal">true</span>);<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p>针对具体每个链接启动:</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"/blog/"</span> <span class="attr">data-instant</span>&gt;</span>Blog<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p><strong>黑名单方式:</strong></p>
@@ -226,7 +226,7 @@
 
 
 
-    <a data-url="http://yoursite.com/website/hexo-03/" data-id="cjfqrtwwx000bcwdmam1w1kop" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/website/hexo-03/" data-id="cjfqs13pg000e5sdmb1fesnfc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
