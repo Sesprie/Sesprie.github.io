@@ -230,7 +230,7 @@ body,
 }
 body {
   background: #eaeaea;
-  font: consolas;
+  font: menlo;
   -webkit-text-size-adjust: 100%;
 }
 code {
