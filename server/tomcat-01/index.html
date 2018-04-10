@@ -29,7 +29,7 @@
 <meta property="og:description" content="前言Tomcat隶属于Apache基金会，是开源的轻量级Web应用服务器，使用非常广泛。server.xml是Tomcat中最重要的配置文件，server.xml的每一个元素都对应了Tomcat中的一个组件；通过对xml文件中元素的配置，可以实现对Tomcat中各个组件的控制。因此，学习server.xml文件的配置，对于了解和使用Tomcat至关重要。 本文将通过实例，介绍server.xml">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/src/img/server/tomcat-01-01.jpg">
-<meta property="og:updated_time" content="2018-04-08T05:38:00.450Z">
+<meta property="og:updated_time" content="2018-04-10T01:14:13.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="详解Tomcat 配置文件server.xml">
 <meta name="twitter:description" content="前言Tomcat隶属于Apache基金会，是开源的轻量级Web应用服务器，使用非常广泛。server.xml是Tomcat中最重要的配置文件，server.xml的每一个元素都对应了Tomcat中的一个组件；通过对xml文件中元素的配置，可以实现对Tomcat中各个组件的控制。因此，学习server.xml文件的配置，对于了解和使用Tomcat至关重要。 本文将通过实例，介绍server.xml">
@@ -185,26 +185,26 @@
 <p>本文将通过实例，介绍server.xml中各个组件的配置，并详细说明Tomcat各个核心组件的作用以及各个组件之间的相互关系。</p>
 <p>说明：由于server.xml文件中元素与Tomcat中组件的对应关系，后文中为了描述方便，“元素”和“组件”的使用不严格区分。</p>
 <p><strong>如果觉得文章对你有帮助，欢迎点赞或转载。文章有疏漏之处，欢迎批评指正。</strong></p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p><a href="http://www.cnblogs.com/kismetv/p/7228274.html#title1" target="_blank" rel="noopener">一、一个server.xml配置实例</a></p>
-<p><a href="http://www.cnblogs.com/kismetv/p/7228274.html#title2" target="_blank" rel="noopener">二、server.xml文档的元素分类和整体结构</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title2-1" target="_blank" rel="noopener">1、整体结构</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title2-2" target="_blank" rel="noopener">2、元素分类</a></p>
-<p><a href="http://www.cnblogs.com/kismetv/p/7228274.html#title3" target="_blank" rel="noopener">三、核心组件</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title3-1" target="_blank" rel="noopener">1、Server</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title3-2" target="_blank" rel="noopener">2、Service</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title3-3" target="_blank" rel="noopener">3、Connector</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title3-4" target="_blank" rel="noopener">4、Engine</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title3-5" target="_blank" rel="noopener">5、Host</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title3-6" target="_blank" rel="noopener">6、Context</a></p>
-<p><a href="http://www.cnblogs.com/kismetv/p/7228274.html#title4" target="_blank" rel="noopener">四、核心组件的关联</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title4-1" target="_blank" rel="noopener">1、整体关系</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title4-2" target="_blank" rel="noopener">2、如何确定请求由谁处理？</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title4-3" target="_blank" rel="noopener">3、如何配置多个服务</a></p>
-<p><a href="http://www.cnblogs.com/kismetv/p/7228274.html#title5" target="_blank" rel="noopener">五、其他组件</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title5-1" target="_blank" rel="noopener">1、Listener</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title5-2" target="_blank" rel="noopener">2、GlobalNamingResources与Realm</a></p>
-<p>　　<a href="http://www.cnblogs.com/kismetv/p/7228274.html#title5-3" target="_blank" rel="noopener">3、Valve</a></p>
-<p><a href="http://www.cnblogs.com/kismetv/p/7228274.html#title6" target="_blank" rel="noopener">六、参考文献</a></p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>一、一个server.xml配置实例</p>
+<p>二、server.xml文档的元素分类和整体结构</p>
+<p>　　1、整体结构</p>
+<p>　　2、元素分类</p>
+<p>三、核心组件</p>
+<p>　　1、Server</p>
+<p>　　2、Service</p>
+<p>　　3、Connector</p>
+<p>　　4、Engine</p>
+<p>　　5、Host</p>
+<p>　　6、Context</p>
+<p>四、核心组件的关联</p>
+<p>　　1、整体关系</p>
+<p>　　2、如何确定请求由谁处理？</p>
+<p>　　3、如何配置多个服务</p>
+<p>五、其他组件</p>
+<p>　　1、Listener</p>
+<p>　　2、GlobalNamingResources与Realm</p>
+<p>　　3、Valve</p>
+<p>六、参考文献</p>
 <h1 id="一、一个server-xml配置实例"><a href="#一、一个server-xml配置实例" class="headerlink" title="一、一个server.xml配置实例"></a>一、一个server.xml配置实例</h1><p>server.xml位于$TOMCAT_HOME/conf目录下；下面是一个server.xml实例。后文中将结合该实例讲解server.xml中，各个元素的含义和作用；在阅读后续章节过程中，可以对照该xml文档便于理解。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"> 1 <span class="tag">&lt;<span class="name">Server</span> <span class="attr">port</span>=<span class="string">"8005"</span> <span class="attr">shutdown</span>=<span class="string">"SHUTDOWN"</span>&gt;</span></span><br><span class="line"> 2   <span class="tag">&lt;<span class="name">Listener</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.startup.VersionLoggerListener"</span> /&gt;</span></span><br><span class="line"> 3   <span class="tag">&lt;<span class="name">Listener</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.core.AprLifecycleListener"</span> <span class="attr">SSLEngine</span>=<span class="string">"on"</span> /&gt;</span></span><br><span class="line"> 4   <span class="tag">&lt;<span class="name">Listener</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.core.JasperListener"</span> /&gt;</span></span><br><span class="line"> 5   <span class="tag">&lt;<span class="name">Listener</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.core.JreMemoryLeakPreventionListener"</span> /&gt;</span></span><br><span class="line"> 6   <span class="tag">&lt;<span class="name">Listener</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.mbeans.GlobalResourcesLifecycleListener"</span> /&gt;</span></span><br><span class="line"> 7   <span class="tag">&lt;<span class="name">Listener</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.core.ThreadLocalLeakPreventionListener"</span> /&gt;</span></span><br><span class="line"> 8 </span><br><span class="line"> 9   <span class="tag">&lt;<span class="name">GlobalNamingResources</span>&gt;</span></span><br><span class="line">10     <span class="tag">&lt;<span class="name">Resource</span> <span class="attr">name</span>=<span class="string">"UserDatabase"</span> <span class="attr">auth</span>=<span class="string">"Container"</span></span></span><br><span class="line"><span class="tag"><span class="attr">11</span>               <span class="attr">type</span>=<span class="string">"org.apache.catalina.UserDatabase"</span></span></span><br><span class="line"><span class="tag"><span class="attr">12</span>               <span class="attr">description</span>=<span class="string">"User database that can be updated and saved"</span></span></span><br><span class="line"><span class="tag"><span class="attr">13</span>               <span class="attr">factory</span>=<span class="string">"org.apache.catalina.users.MemoryUserDatabaseFactory"</span></span></span><br><span class="line"><span class="tag"><span class="attr">14</span>               <span class="attr">pathname</span>=<span class="string">"conf/tomcat-users.xml"</span> /&gt;</span></span><br><span class="line">15   <span class="tag">&lt;/<span class="name">GlobalNamingResources</span>&gt;</span></span><br><span class="line">16  </span><br><span class="line">17   <span class="tag">&lt;<span class="name">Service</span> <span class="attr">name</span>=<span class="string">"Catalina"</span>&gt;</span></span><br><span class="line">18     <span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8080"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag"><span class="attr">19</span>                <span class="attr">connectionTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag"><span class="attr">20</span>                <span class="attr">redirectPort</span>=<span class="string">"8443"</span> /&gt;</span></span><br><span class="line">21     <span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8009"</span> <span class="attr">protocol</span>=<span class="string">"AJP/1.3"</span> <span class="attr">redirectPort</span>=<span class="string">"8443"</span> /&gt;</span></span><br><span class="line">22     <span class="tag">&lt;<span class="name">Engine</span> <span class="attr">name</span>=<span class="string">"Catalina"</span> <span class="attr">defaultHost</span>=<span class="string">"localhost"</span>&gt;</span></span><br><span class="line">23       <span class="tag">&lt;<span class="name">Realm</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.realm.LockOutRealm"</span>&gt;</span></span><br><span class="line">24         <span class="tag">&lt;<span class="name">Realm</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.realm.UserDatabaseRealm"</span></span></span><br><span class="line"><span class="tag"><span class="attr">25</span>                <span class="attr">resourceName</span>=<span class="string">"UserDatabase"</span>/&gt;</span></span><br><span class="line">26       <span class="tag">&lt;/<span class="name">Realm</span>&gt;</span></span><br><span class="line">27  </span><br><span class="line">28       <span class="tag">&lt;<span class="name">Host</span> <span class="attr">name</span>=<span class="string">"localhost"</span>  <span class="attr">appBase</span>=<span class="string">"webapps"</span></span></span><br><span class="line"><span class="tag"><span class="attr">29</span>             <span class="attr">unpackWARs</span>=<span class="string">"true"</span> <span class="attr">autoDeploy</span>=<span class="string">"true"</span>&gt;</span></span><br><span class="line">30         <span class="tag">&lt;<span class="name">Valve</span> <span class="attr">className</span>=<span class="string">"org.apache.catalina.valves.AccessLogValve"</span> <span class="attr">directory</span>=<span class="string">"logs"</span></span></span><br><span class="line"><span class="tag"><span class="attr">31</span>                <span class="attr">prefix</span>=<span class="string">"localhost_access_log."</span> <span class="attr">suffix</span>=<span class="string">".txt"</span></span></span><br><span class="line"><span class="tag"><span class="attr">32</span>                <span class="attr">pattern</span>=<span class="string">"%h %l %u %t &amp;quot;%r&amp;quot; %s %b"</span> /&gt;</span></span><br><span class="line">33       <span class="tag">&lt;/<span class="name">Host</span>&gt;</span></span><br><span class="line">34     <span class="tag">&lt;/<span class="name">Engine</span>&gt;</span></span><br><span class="line">35   <span class="tag">&lt;/<span class="name">Service</span>&gt;</span></span><br><span class="line">36 <span class="tag">&lt;/<span class="name">Server</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h1 id="二、server-xml文档的元素分类和整体结构"><a href="#二、server-xml文档的元素分类和整体结构" class="headerlink" title="二、server.xml文档的元素分类和整体结构"></a>二、server.xml文档的元素分类和整体结构</h1><h2 id="1、整体结构"><a href="#1、整体结构" class="headerlink" title="1、整体结构"></a>1、整体结构</h2><p>server.xml的整体结构如下：</p>
@@ -365,7 +365,7 @@
 
 
 
-    <a data-url="http://yoursite.com/server/tomcat-01/" data-id="cjfqs13p600075sdmssvd11dv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/server/tomcat-01/" data-id="cjfsz5ii5000br8dmj2z50xrw" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -534,6 +534,26 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/python/python-02/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../src/img/python/python-02-01.jpg)" alt="python爬取budejie.com视频[静态页面]" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/python/python-02/" class="title">python爬取budejie.com视频[静态页面]</a></p>
+                            <p class="item-date"><time datetime="2018-04-08T14:42:07.659Z" itemprop="datePublished">2018-04-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/php/php-01/" class="thumbnail">
     
     
@@ -611,26 +631,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/website/hexo-09/" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../src/img/website/hexo-09-01.jpg)" alt="为hexo主题添加顶部进度加载条" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/website/hexo-09/" class="title">为hexo主题添加顶部进度加载条</a></p>
-                            <p class="item-date"><time datetime="2018-04-07T13:01:37.358Z" itemprop="datePublished">2018-04-07</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -643,7 +643,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">15</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">16</span></li></ul>
         </div>
     </div>
 
@@ -653,7 +653,7 @@
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">标签</h3>
         <div class="widget">
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tomcat/">tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题自定义/">博客主题自定义</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/php/">php</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python爬虫/">python爬虫</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tomcat/">tomcat</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/">ubuntu</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客主题自定义/">博客主题自定义</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客搭建/">博客搭建</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/模板引擎/">模板引擎</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/装饰器/">装饰器</a><span class="tag-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -663,7 +663,7 @@
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题自定义/" style="font-size: 13.33px;">博客主题自定义</a> <a href="/tags/博客搭建/" style="font-size: 16.67px;">博客搭建</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
+            <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/python/" style="font-size: 12.5px;">python</a> <a href="/tags/python爬虫/" style="font-size: 10px;">python爬虫</a> <a href="/tags/tomcat/" style="font-size: 10px;">tomcat</a> <a href="/tags/ubuntu/" style="font-size: 10px;">ubuntu</a> <a href="/tags/博客主题自定义/" style="font-size: 15px;">博客主题自定义</a> <a href="/tags/博客搭建/" style="font-size: 17.5px;">博客搭建</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/装饰器/" style="font-size: 10px;">装饰器</a>
         </div>
     </div>
 
