@@ -30,19 +30,19 @@ var _hmt = _hmt || [];
     
         <meta name="keywords" content="Hexo" />
     
-    <meta name="description" content="闲来无事，想改改hexo博客的标签云样式，找到了一篇博客，跟着节奏走着走着，不小心踩了好多坑，好歹我坚强，几次google 后，我爬起来了。。。 错误一： 1234&amp;gt;。。。&amp;gt;gyp ERR! stack Error: Can&amp;apos;t find Python executable &amp;quot;python&amp;quot;, you can set the PYTHON env var">
+    <meta name="description" content="闲来无事，想改改hexo博客的标签云样式，找到了一篇博客，跟着节奏走着走着，不小心踩了好多坑，好歹我坚强，几次google 后，我爬起来了。。。 错误一：1gyp ERR! stack Error: Can&apos;t find Python executable &quot;python&quot;, you can set the PYTHON env variable. 提示缺少python，wtf，明明安装了pyt">
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="记录一次填npm安装依赖坑的经历">
 <meta property="og:url" content="http://yoursite.com/articles/17.html">
 <meta property="og:site_name" content="Sesprie">
-<meta property="og:description" content="闲来无事，想改改hexo博客的标签云样式，找到了一篇博客，跟着节奏走着走着，不小心踩了好多坑，好歹我坚强，几次google 后，我爬起来了。。。 错误一： 1234&amp;gt;。。。&amp;gt;gyp ERR! stack Error: Can&amp;apos;t find Python executable &amp;quot;python&amp;quot;, you can set the PYTHON env var">
+<meta property="og:description" content="闲来无事，想改改hexo博客的标签云样式，找到了一篇博客，跟着节奏走着走着，不小心踩了好多坑，好歹我坚强，几次google 后，我爬起来了。。。 错误一：1gyp ERR! stack Error: Can&apos;t find Python executable &quot;python&quot;, you can set the PYTHON env variable. 提示缺少python，wtf，明明安装了pyt">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/src/img/articles/17/87796bdaff.jpg">
-<meta property="og:updated_time" content="2018-04-26T06:24:29.805Z">
+<meta property="og:updated_time" content="2018-05-04T14:55:28.184Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="记录一次填npm安装依赖坑的经历">
-<meta name="twitter:description" content="闲来无事，想改改hexo博客的标签云样式，找到了一篇博客，跟着节奏走着走着，不小心踩了好多坑，好歹我坚强，几次google 后，我爬起来了。。。 错误一： 1234&amp;gt;。。。&amp;gt;gyp ERR! stack Error: Can&amp;apos;t find Python executable &amp;quot;python&amp;quot;, you can set the PYTHON env var">
+<meta name="twitter:description" content="闲来无事，想改改hexo博客的标签云样式，找到了一篇博客，跟着节奏走着走着，不小心踩了好多坑，好歹我坚强，几次google 后，我爬起来了。。。 错误一：1gyp ERR! stack Error: Can&apos;t find Python executable &quot;python&quot;, you can set the PYTHON env variable. 提示缺少python，wtf，明明安装了pyt">
 <meta name="twitter:image" content="http://yoursite.com/src/img/articles/17/87796bdaff.jpg">
     
 
@@ -188,28 +188,26 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
             <p><img src="/../../src/img/articles/17/87796bdaff.jpg" alt=""></p>
 <p>闲来无事，想改改<code>hexo</code>博客的标签云样式，找到了一篇博客，跟着节奏走着走着，不小心踩了好多坑，好歹我坚强，几次<code>google</code> 后，我爬起来了。。。</p>
-<h5 id="错误一："><a href="#错误一：" class="headerlink" title="错误一："></a>错误一：</h5><blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;。。。</span><br><span class="line">&gt;gyp ERR! stack Error: Can&apos;t find Python executable &quot;python&quot;, you can set the PYTHON env variable.</span><br><span class="line">&gt;。。。</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
-</blockquote>
+<h5 id="错误一："><a href="#错误一：" class="headerlink" title="错误一："></a>错误一：</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gyp ERR! stack Error: Can<span class="string">'t find Python executable "python", you can set the PYTHON env variable.</span></span><br></pre></td></tr></table></figure>
 <p>提示缺少<code>python</code>，<code>wtf</code>，明明安装了<code>python</code> 并配置了环境变量，居然提示找不到，</p>
 <p>答案在<a href="https://stackoverflow.com/questions/15126050/running-python-on-windows-for-node-js-dependencies" target="_blank" rel="noopener">这里</a></p>
 <blockquote>
 <p>If you haven’t got python installed along with all the node-gyp dependecies, simply execute:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;npm install --global --production windows-build-tools</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global --production windows-build-tools</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>and then to install the package:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;npm install --global node-gyp</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global node-gyp</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>once installed, you will have all the node-gyp dependencies downloaded, but you still need the environment variable. Validate Python is indeed found in the correct folder:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;C:\Users\ben\.windows-build-tools\python27\python.exe </span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">C:\Users\ben\.windows-build-tools\python27\python.exe</span><br></pre></td></tr></table></figure>
 <blockquote>
 <p><em>Note - it uses python 2.7 not 3.x as it is not supported</em></p>
 <p>If it doesn’t moan, go ahead and create your (user) environment variable:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;setx PYTHON &quot;%USERPROFILE%\.windows-build-tools\python27\python.exe&quot;</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure>
 </blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setx PYTHON <span class="string">"%USERPROFILE%\.windows-build-tools\python27\python.exe"</span></span><br></pre></td></tr></table></figure>
 <blockquote>
 <p>restart cmd, and verify the variable exists via <code>set PYTHON</code> which should return the variable</p>
 <p>Lastly re-apply <code>npm install &lt;module&gt;</code></p>
@@ -230,7 +228,7 @@ var _hmt = _hmt || [];
 </ol>
 </blockquote>
 <p><img src="/../../src/img/articles/17/2018-04-26_140814.jpg" alt=""></p>
-<p>历经周折，安装好了。</p>
+<p>收工。</p>
 
         </div>
         <footer class="article-footer">
