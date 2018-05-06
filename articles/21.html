@@ -22,10 +22,10 @@ var _hmt = _hmt || [];
     
     <title>为hexo主题添加顶部进度加载条 | Sesprie</title>
     
+    
     <!--�Զ��嶥����������ɫ-->
 	<script src="/js/pace.min.js"></script>
 	<link href="/css/pace-theme-flash.css" rel="stylesheet">
-
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
         <meta name="keywords" content="Hexo" />
@@ -34,16 +34,16 @@ var _hmt = _hmt || [];
 <meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为hexo主题添加顶部进度加载条">
-<meta property="og:url" content="http://yoursite.com/website/hexo-09.html">
+<meta property="og:url" content="http://yoursite.com/articles/21.html">
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="最终效果，见文末。 使用Everything在根目录下搜索head.ejs或head.swig，取决于你使用的主题所采用的引擎，如果是hueman主题，就是/themes/hueman/layout/common/head.ejs，如果是next主题就是/themes/next/layout/_partials/head.swig。 实现方法： 在文件的靠前一点的位置添加下面的代码（如果连接打不">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/src/img/website/hexo-09-01.jpg">
-<meta property="og:updated_time" content="2018-04-24T06:32:24.855Z">
+<meta property="og:image" content="http://yoursite.com/src/img/articles/21/hexo-09-01.jpg">
+<meta property="og:updated_time" content="2018-05-06T04:38:51.413Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为hexo主题添加顶部进度加载条">
 <meta name="twitter:description" content="最终效果，见文末。 使用Everything在根目录下搜索head.ejs或head.swig，取决于你使用的主题所采用的引擎，如果是hueman主题，就是/themes/hueman/layout/common/head.ejs，如果是next主题就是/themes/next/layout/_partials/head.swig。 实现方法： 在文件的靠前一点的位置添加下面的代码（如果连接打不">
-<meta name="twitter:image" content="http://yoursite.com/src/img/website/hexo-09-01.jpg">
+<meta name="twitter:image" content="http://yoursite.com/src/img/articles/21/hexo-09-01.jpg">
     
 
     
@@ -95,7 +95,7 @@ var _hmt = _hmt || [];
                                     <a class="main-nav-list-link" href="/">主页</a>
                                 </li>
                             
-                                        
+                                        <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/Windows软件/">Windows软件</a></li></ul>
                                     
                         </ul>
                         <nav id="sub-nav">
@@ -154,7 +154,7 @@ var _hmt = _hmt || [];
     </h1>
 </div>
                         <div class="main-body-content">
-                            <article id="post-website/hexo-09" class="article article-single article-type-post" itemscope itemprop="blogPost">
+                            <article id="post-articles/21" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
             <header class="article-header">
@@ -171,7 +171,7 @@ var _hmt = _hmt || [];
             <div class="article-meta">
                 
     <div class="article-date">
-        <a href="/website/hexo-09.html" class="article-date">
+        <a href="/articles/21.html" class="article-date">
             <time datetime="2018-04-07T13:01:37.358Z" itemprop="datePublished">2018-04-07</time>
         </a>
     </div>
@@ -186,16 +186,16 @@ var _hmt = _hmt || [];
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/../../src/img/website/hexo-09-01.jpg" alt=""></p>
+            <p><img src="/../../src/img/articles/21/hexo-09-01.jpg" alt=""></p>
 <p>最终效果，见文末。</p>
 <p>使用<code>Everything</code>在根目录下搜索<code>head.ejs或head.swig</code>，取决于你使用的主题所采用的引擎，如果是<code>hueman</code>主题，就是<code>/themes/hueman/layout/common/head.ejs</code>，如果是next主题就是<code>/themes/next/layout/_partials/head.swig</code>。</p>
 <p><strong>实现方法：</strong></p>
 <p>在文件的靠前一点的位置添加下面的代码（如果连接打不开，文末有文件的下载地址）：</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"//cdn.bootcss.com/pace/1.0.2/pace.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&lt;link href=<span class="string">"//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"//cdn.bootcss.com/pace/1.0.2/pace.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;link href=<span class="string">"//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css"</span> rel=<span class="string">"stylesheet"</span>&gt;</span><br></pre></td></tr></table></figure>
 <p>默认的是粉色的，要改变颜色可以在<code>/themes/next/layout/_partials/head.swig</code>文件中添加如下代码（接在刚才<code>link</code>的后面）</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">    <span class="selector-class">.pace</span> <span class="selector-class">.pace-progress</span> &#123;</span><br><span class="line">        <span class="attribute">background</span>: <span class="number">#1E92FB</span>; <span class="comment">/*进度条颜色*/</span></span><br><span class="line">        <span class="attribute">height</span>: <span class="number">3px</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.pace</span> <span class="selector-class">.pace-progress-inner</span> &#123;</span><br><span class="line">         <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">10px</span> <span class="number">#1E92FB</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">5px</span>     <span class="number">#1E92FB</span>; <span class="comment">/*阴影颜色*/</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="selector-class">.pace</span> <span class="selector-class">.pace-activity</span> &#123;</span><br><span class="line">        <span class="attribute">border-top-color</span>: <span class="number">#1E92FB</span>;    <span class="comment">/*上边框颜色*/</span></span><br><span class="line">        <span class="attribute">border-left-color</span>: <span class="number">#1E92FB</span>;    <span class="comment">/*左边框颜色*/</span></span><br><span class="line">    &#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
 <p>如果没有效果，找到主题的配置文件<code>_config.yml</code>，搜索一下是否有<code>pace: false</code>选项，如果有改为<code>true</code>。</p>
-<p><img src="/../../src/img/website/hexo-09-02.gif" alt=""></p>
+<p><img src="/../../src/img/articles/21/hexo-09-02.gif" alt=""></p>
 <p><a href="https://www.jianshu.com/p/f054333ac9e6" target="_blank" rel="noopener">原文地址</a></p>
 <p><a href="/../../src/js/pace.min.js">pace.min.js</a><br><a href="/../../src/css/pace-theme-flash.css">pace-theme-flash.css</a></p>
 
@@ -204,59 +204,66 @@ var _hmt = _hmt || [];
             
 
 
-    <div class="a2a_kit a2a_default_style">
-    <a class="a2a_dd" href="https://www.addtoany.com/share">Share</a>
-    <span class="a2a_divider"></span>
-    <a class="a2a_button_facebook"></a>
-    <a class="a2a_button_twitter"></a>
-    <a class="a2a_button_google_plus"></a>
-    <a class="a2a_button_pinterest"></a>
-    <a class="a2a_button_tumblr"></a>
-</div>
-<script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
-<style>
-    .a2a_menu {
-        border-radius: 4px;
-    }
-    .a2a_menu a {
-        margin: 2px 0;
-        font-size: 14px;
-        line-height: 16px;
-        border-radius: 4px;
-        color: inherit !important;
-        font-family: 'Microsoft Yahei';
-    }
-    #a2apage_dropdown {
-        margin: 10px 0;
-    }
-    .a2a_mini_services {
-        padding: 10px;
-    }
-    a.a2a_i,
-    i.a2a_i {
-        width: 122px;
-        line-height: 16px;
-    }
-    a.a2a_i .a2a_svg,
-    a.a2a_more .a2a_svg {
-        width: 16px;
-        height: 16px;
-        line-height: 16px;
-        vertical-align: top;
-        background-size: 16px;
-    }
-    a.a2a_i {
-        border: none !important;
-    }
-    a.a2a_menu_show_more_less {
-        margin: 0;
-        padding: 10px 0;
-        line-height: 16px;
-    }
-    .a2a_mini_services:after{content:".";display:block;height:0;clear:both;visibility:hidden}
-    .a2a_mini_services{*+height:1%;}
-</style>
 
+    <a data-url="http://yoursite.com/articles/21.html" data-id="cjgud3xui000o58vqcglk48xj" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
 
         </footer>
     </div>
@@ -335,18 +342,18 @@ var _hmt = _hmt || [];
         
 <nav id="article-nav">
     
-        <a href="/website/hexo-10.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <a href="/articles/20.html" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption">下一篇</strong>
         <p class="article-nav-title">
         
-            为hexo的主题添加动态背景
+            为Hexo主题添加动态背景
         
         </p>
         <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
     </a>
     
     
-        <a href="/website/hexo-08.html" id="article-nav-older" class="article-nav-link-wrap">
+        <a href="/articles/22.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
         <p class="article-nav-title">为hexo主题添加右键桃心效果</p>
         <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
@@ -363,6 +370,46 @@ var _hmt = _hmt || [];
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/articles/19.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../src/img/articles/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/articles/19.html" class="title">Hexo主题折腾汇总</a></p>
+                            <p class="item-date"><time datetime="2018-05-06T04:20:30.094Z" itemprop="datePublished">2018-05-06</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/articles/18.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(/../../src/img/articles/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/Windows软件/">Windows软件</a></p>
+                            <p class="item-title"><a href="/articles/18.html" class="title">百度网盘高速下载器</a></p>
+                            <p class="item-date"><time datetime="2018-05-06T03:43:31.479Z" itemprop="datePublished">2018-05-06</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -424,59 +471,26 @@ var _hmt = _hmt || [];
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/articles/5.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../src/img/articles/5/B-1.jpg)" alt="code::blocks编译器环境的配置" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/articles/5.html" class="title">code::blocks编译器环境的配置</a></p>
-                            <p class="item-date"><time datetime="2018-04-23T03:12:56.017Z" itemprop="datePublished">2018-04-23</time></p>
-                        </div>
-                    </li>
-                
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/articles/3.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(/../../src/img/articles/3/15.jpg)" alt="探究python切片原理，动手实现list切片" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/articles/3.html" class="title">探究python切片原理，动手实现list切片</a></p>
-                            <p class="item-date"><time datetime="2018-04-23T03:06:47.883Z" itemprop="datePublished">2018-04-23</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
 
             
                 
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Windows软件/">Windows软件</a><span class="category-list-count">2</span></li></ul>
+        </div>
+    </div>
+
 
             
                 
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -486,9 +500,10 @@ var _hmt = _hmt || [];
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Dos/" style="font-size: 14px;">Dos</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 12px;">Javascript</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Sublime/" style="font-size: 10px;">Sublime</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/Windows/" style="font-size: 12px;">Windows</a> <a href="/tags/Windows软件/" style="font-size: 10px;">Windows软件</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/抓包/" style="font-size: 14px;">抓包</a> <a href="/tags/未分类/" style="font-size: 10px;">未分类</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/爬虫/" style="font-size: 16px;">爬虫</a> <a href="/tags/计算机基础/" style="font-size: 10px;">计算机基础</a>
+            <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Dos/" style="font-size: 14px;">Dos</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/Javascript/" style="font-size: 12px;">Javascript</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Sublime/" style="font-size: 10px;">Sublime</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/Windows/" style="font-size: 12px;">Windows</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/抓包/" style="font-size: 14px;">抓包</a> <a href="/tags/未分类/" style="font-size: 10px;">未分类</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/爬虫/" style="font-size: 16px;">爬虫</a> <a href="/tags/百度网盘/" style="font-size: 10px;">百度网盘</a> <a href="/tags/计算机基础/" style="font-size: 10px;">计算机基础</a>
         </div>
     </div>
+
 
             
         
@@ -500,24 +515,15 @@ var _hmt = _hmt || [];
         <footer id="footer">
     <div class="container">
         <div class="container-inner">
-	<script async src="/js/count_visitor.js"></script>
             <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
             <div class="credit">
                 <h1 class="logo-wrap">
                     <a href="/" class="logo"></a>
                 </h1>
-		<!--
-		<span id="busuanzi_container_site_pv">
-		    <i class="fa fa-user-md"></i>  <span id="busuanzi_value_site_pv"></span>
-		</span>
-		-->
-                
                 <p>&copy; 2018 Sesprie</p>
-		<p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>. <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5505886'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D5505886%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
-
-		<!--
-		Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p> 
-		-->
+                <p>Powered by <a href="//hexo.io/" target="_blank">Hexo</a>.<!--cnzzͳ��--><script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_5505886'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D5505886%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
+		
+		 <!--Theme by <a href="//github.com/ppoffice" target="_blank">PPOffice</a></p>-->
             </div>
         </div>
     </div>
@@ -528,7 +534,7 @@ var _hmt = _hmt || [];
     var disqus_shortname = 'hexo-theme-hueman';
     
     
-    var disqus_url = 'http://yoursite.com/website/hexo-09.html';
+    var disqus_url = 'http://yoursite.com/articles/21.html';
     
     (function() {
     var dsq = document.createElement('script');
@@ -564,12 +570,10 @@ var _hmt = _hmt || [];
 <script src="/js/main.js"></script>
 
     </div>
-    <!--��̬����
-	<script type="text/javascript" src="/js/canvas-nest.min.js"></script>
-    -->
-	
+    	
+
+	<!--51.laͳ��-->
 	<script type="text/javascript" src="//js.users.51.la/19459457.js"></script>
-	
 </body>
 </html>
 <!-- ҳ����С���� -->
