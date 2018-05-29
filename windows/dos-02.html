@@ -41,7 +41,7 @@ var _hmt = _hmt || [];
 <meta property="og:description" content="使用重定向的方式: dos下进入要导出文件名的目录： 1dir &amp;gt; filename.txt 如果不需要时间、大小等信息，添加/b即可：  1dir /b &amp;gt; filename.txt 此处&amp;gt;的作用相当于重定向，会将dir的输出的结果写入文件 如果希望将子目录中的文件和文件夹列表也全部列出来使用\s 1dir /s /b &amp;gt; filename.txt 生成的文本拷贝到ex">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://yoursite.com/src/img/windows/dos-02/5d55ee66d5.jpg">
-<meta property="og:updated_time" content="2018-04-25T08:07:09.264Z">
+<meta property="og:updated_time" content="2018-05-29T14:41:08.257Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="dos下导出当前目录所有文件的名称到文件">
 <meta name="twitter:description" content="使用重定向的方式: dos下进入要导出文件名的目录： 1dir &amp;gt; filename.txt 如果不需要时间、大小等信息，添加/b即可：  1dir /b &amp;gt; filename.txt 此处&amp;gt;的作用相当于重定向，会将dir的输出的结果写入文件 如果希望将子目录中的文件和文件夹列表也全部列出来使用\s 1dir /s /b &amp;gt; filename.txt 生成的文本拷贝到ex">
@@ -203,6 +203,7 @@ var _hmt = _hmt || [];
 <p>1，打开一个记事本文档，然后复制下列内容到文档中。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">dir /b *.* &gt; filename.txt</span><br><span class="line">exit</span><br></pre></td></tr></table></figure>
 <p>2、将上述内容复制到要提取文件名的文件夹，然后将该文件改名为X.bat(X可为任意名称)，然后双击运行。</p>
+<p><code>更多参数及用法，可参考 dir /?</code></p>
 
         </div>
         <footer class="article-footer">
@@ -210,7 +211,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/windows/dos-02.html" data-id="cjhjv2k7q003dnovqi0h69b31" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/windows/dos-02.html" data-id="cjhrsi39i002a10vqn8twpi69" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
