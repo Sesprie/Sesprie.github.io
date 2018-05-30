@@ -40,12 +40,12 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="1.打开谷歌浏览器，找到需要抓取的bilibili直播页面，按F12打开开发者工具，再次刷新当前直播页面，  2.将Method设置为显示，点击排序，找到Method为Post的msg请求  3.这里可以找到侧边栏的弹幕信息，这里的返回数据有十条，如果观看的人数较少，返回的数据会有重复  4.这里是请求地址及请求方式  5.这里包含着需要提交的form表单数据，这里的roomid有时和当前直播网">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/src/img/wireshark/wireshark-01/wireshark-01-00.jpg">
-<meta property="og:updated_time" content="2018-04-24T06:37:30.639Z">
+<meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/wireshark/wireshark-01/wireshark-01-00.jpg">
+<meta property="og:updated_time" content="2018-05-30T13:06:18.688Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="抓取哔哩哔哩直播弹幕">
 <meta name="twitter:description" content="1.打开谷歌浏览器，找到需要抓取的bilibili直播页面，按F12打开开发者工具，再次刷新当前直播页面，  2.将Method设置为显示，点击排序，找到Method为Post的msg请求  3.这里可以找到侧边栏的弹幕信息，这里的返回数据有十条，如果观看的人数较少，返回的数据会有重复  4.这里是请求地址及请求方式  5.这里包含着需要提交的form表单数据，这里的roomid有时和当前直播网">
-<meta name="twitter:image" content="http://yoursite.com/src/img/wireshark/wireshark-01/wireshark-01-00.jpg">
+<meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/wireshark/wireshark-01/wireshark-01-00.jpg">
     
 
     
@@ -188,19 +188,19 @@ var _hmt = _hmt || [];
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/../../src/img/wireshark/wireshark-01/wireshark-01-00.jpg" alt=""></p>
+            <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/wireshark/wireshark-01/wireshark-01-00.jpg" alt=""></p>
 <p><strong>1.打开谷歌浏览器，找到需要抓取的bilibili直播页面，按F12打开开发者工具，再次刷新当前直播页面，</strong></p>
-<p><img src="/../../src/img/wireshark/wireshark-01/2018-04-10_122831.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/wireshark/wireshark-01/2018-04-10_122831.jpg" alt=""></p>
 <p><strong>2.将Method设置为显示，点击排序，找到Method为Post的<code>msg</code>请求</strong></p>
-<p><img src="/../../src/img/wireshark/wireshark-01/2018-04-10_122920.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/wireshark/wireshark-01/2018-04-10_122920.jpg" alt=""></p>
 <p><strong>3.这里可以找到侧边栏的弹幕信息，这里的返回数据有十条，如果观看的人数较少，返回的数据会有重复</strong></p>
-<p><img src="/../../src/img/wireshark/wireshark-01/2018-04-10_123112.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/wireshark/wireshark-01/2018-04-10_123112.jpg" alt=""></p>
 <p><strong>4.这里是请求地址及请求方式</strong></p>
-<p><img src="/../../src/img/wireshark/wireshark-01/2018-04-10_123158.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/wireshark/wireshark-01/2018-04-10_123158.jpg" alt=""></p>
 <p><strong>5.这里包含着需要提交的form表单数据，这里的<code>roomid</code>有时和当前直播网址的尾号不一样</strong></p>
-<p><img src="/../../src/img/wireshark/wireshark-01/2018-04-10_123310.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/wireshark/wireshark-01/2018-04-10_123310.jpg" alt=""></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment"># 请求弹幕的地址</span></span><br><span class="line">url = <span class="string">'https://api.live.bilibili.com/ajax/msg'</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 要提交的form表单数据</span></span><br><span class="line">form = &#123;<span class="string">'roomid'</span>: <span class="string">'478948'</span>,</span><br><span class="line">        <span class="string">'csrf_token'</span>: <span class="string">'b0a925f32a985f10b8ec0fcb3d1'</span>&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 每隔一段时间请求一次，</span></span><br><span class="line"><span class="keyword">while</span> <span class="keyword">True</span>:</span><br><span class="line">    time.sleep(<span class="number">2</span>)</span><br><span class="line">    <span class="comment"># 还可以写成requests.request('POST', url, data=form)</span></span><br><span class="line">    response = requests.post(url, data=form)</span><br><span class="line">    <span class="comment"># 将弹幕的内容提取到列表</span></span><br><span class="line">    content = list(map(<span class="keyword">lambda</span> i: response.json()[<span class="string">'data'</span>][<span class="string">'room'</span>][i][<span class="string">'text'</span>], range(<span class="number">10</span>)))</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> content:</span><br><span class="line">        print(i)</span><br></pre></td></tr></table></figure>
-<p><img src="/../../src/img/wireshark/wireshark-01/2018-04-10_132334.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/wireshark/wireshark-01/2018-04-10_132334.jpg" alt=""></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">content = list(map(<span class="keyword">lambda</span> i: response.json()[<span class="string">'data'</span>][<span class="string">'room'</span>][i][<span class="string">'text'</span>], range(<span class="number">10</span>)))</span><br><span class="line"><span class="comment"># 跟下面的代码是一样的含义：</span></span><br><span class="line">content = []</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10</span>):</span><br><span class="line">	content.append(response.json()[<span class="string">'data'</span>][<span class="string">'room'</span>][i][<span class="string">'text'</span>])</span><br></pre></td></tr></table></figure>
 
         </div>
@@ -209,7 +209,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/wireshark/wireshark-01.html" data-id="cjhrsi39i002f10vqz62cqj6i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/wireshark/wireshark-01.html" data-id="cjht4nyel002ddgvq20g1q3tb" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -381,7 +381,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/25.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
     
     
 </a>
@@ -401,7 +401,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/24.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
     
     
 </a>
@@ -421,7 +421,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/23.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
     
     
 </a>
@@ -441,7 +441,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/19.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
     
     
 </a>
@@ -461,7 +461,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/18.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
     
     
 </a>

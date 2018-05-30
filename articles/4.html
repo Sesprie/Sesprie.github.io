@@ -40,12 +40,12 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="红尘初妆，山河无疆。 最初的面庞，碾碎梦魇无常，命格无双   123456789101112131415161718192021222324252627282930313233343536# -*- coding:utf-8 -*-import tkinter as tkwindow = tk.Tk()window.title(&apos;My First Window&apos;)window.geometry(">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/src/img/articles/4/12.jpg">
-<meta property="og:updated_time" content="2018-04-24T06:37:18.011Z">
+<meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/4/12.jpg">
+<meta property="og:updated_time" content="2018-05-30T13:02:09.489Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python Tkinter 标签和按钮">
 <meta name="twitter:description" content="红尘初妆，山河无疆。 最初的面庞，碾碎梦魇无常，命格无双   123456789101112131415161718192021222324252627282930313233343536# -*- coding:utf-8 -*-import tkinter as tkwindow = tk.Tk()window.title(&apos;My First Window&apos;)window.geometry(">
-<meta name="twitter:image" content="http://yoursite.com/src/img/articles/4/12.jpg">
+<meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/4/12.jpg">
     
 
     
@@ -191,9 +191,9 @@ var _hmt = _hmt || [];
             <blockquote>
 <p>红尘初妆，山河无疆。 最初的面庞，碾碎梦魇无常，命格无双</p>
 </blockquote>
-<p><img src="/../../src/img/articles/4/12.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/4/12.jpg" alt=""></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding:utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> tkinter <span class="keyword">as</span> tk</span><br><span class="line"></span><br><span class="line">window = tk.Tk()</span><br><span class="line">window.title(<span class="string">'My First Window'</span>)</span><br><span class="line">window.geometry(<span class="string">'320x240'</span>)	<span class="comment"># 设置窗口大小，用英文字母x表示，不要用*</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># # 创建一个不可变标签</span></span><br><span class="line"><span class="comment"># lab = tk.Label(window,text = 'This is Tk',bg = 'gray',font = ('consolas', 12),width = 15, height = 2)</span></span><br><span class="line"><span class="comment"># lab.pack() # 固定位置</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">var = tk.StringVar() <span class="comment"># 文字变量存储器</span></span><br><span class="line"><span class="comment"># 创建一个可变标签</span></span><br><span class="line"><span class="comment"># textvariable可以使标签文本变化</span></span><br><span class="line">lab = tk.Label(window,textvariable = var, bg = <span class="string">'green'</span>, font = (<span class="string">'consolas'</span>, <span class="number">12</span>), width = <span class="number">25</span>, height = <span class="number">2</span>)</span><br><span class="line">lab.pack() <span class="comment"># 固定位置</span></span><br><span class="line"></span><br><span class="line">on_hit = <span class="keyword">False</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">click_me</span><span class="params">()</span>:</span></span><br><span class="line">	<span class="keyword">global</span> on_hit <span class="comment"># 声明全局变量</span></span><br><span class="line">	<span class="keyword">if</span> on_hit == <span class="keyword">False</span>:</span><br><span class="line">		var.set(<span class="string">'你点击了按钮'</span>)</span><br><span class="line">		on_hit = <span class="keyword">True</span></span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		var.set(<span class="string">''</span>)</span><br><span class="line">		on_hit = <span class="keyword">False</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#  创建一个按钮</span></span><br><span class="line">butt = tk.Button(window,text = <span class="string">'click me'</span>,width = <span class="number">15</span>, height = <span class="number">2</span>, command = click_me)	<span class="comment"># 点击按钮式执行的命令</span></span><br><span class="line">butt.pack()</span><br><span class="line"></span><br><span class="line">window.mainloop()</span><br></pre></td></tr></table></figure>
-<p><strong>完成之后的效果图</strong><br><img src="/../../src/img/articles/4/13.jpg" alt=""><br><img src="/../../src/img/articles/4/14.jpg" alt=""></p>
+<p><strong>完成之后的效果图</strong><br><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/4/13.jpg" alt=""><br><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/4/14.jpg" alt=""></p>
 
         </div>
         <footer class="article-footer">
@@ -201,7 +201,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/articles/4.html" data-id="cjhrsi388001210vqiubsjh9n" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/articles/4.html" data-id="cjht4nyda0012dgvq5du399jr" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -367,7 +367,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/25.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
     
     
 </a>
@@ -387,7 +387,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/24.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
     
     
 </a>
@@ -407,7 +407,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/23.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
     
     
 </a>
@@ -427,7 +427,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/19.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
     
     
 </a>
@@ -447,7 +447,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/18.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
     
     
 </a>

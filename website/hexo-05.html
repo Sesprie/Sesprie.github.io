@@ -40,12 +40,12 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="写在前面本文将会从零开始开发一个简单的博客主题。样式主要参考 Hexo theme 中的 Noise 主题。 开始之前你需要了解：  模板引擎 CSS预处理器 Hexo 文档  本文使用的模板引擎为 ejs，使用的 CSS 预处理器为 stylus。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/src/img/website/hexo-05-01.jpg">
-<meta property="og:updated_time" content="2018-04-24T06:32:16.133Z">
+<meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/website/hexo-05-01.jpg">
+<meta property="og:updated_time" content="2018-05-30T13:06:18.679Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="从零开始制作 Hexo 主题">
 <meta name="twitter:description" content="写在前面本文将会从零开始开发一个简单的博客主题。样式主要参考 Hexo theme 中的 Noise 主题。 开始之前你需要了解：  模板引擎 CSS预处理器 Hexo 文档  本文使用的模板引擎为 ejs，使用的 CSS 预处理器为 stylus。这也是 hexo 项目预装了的 render 插件，如果想使用其他模板引擎或者其他 CSS 预处理器，可以安装相对应的 render 插件。例如我的">
-<meta name="twitter:image" content="http://yoursite.com/src/img/website/hexo-05-01.jpg">
+<meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/website/hexo-05-01.jpg">
     
 
     
@@ -188,7 +188,7 @@ var _hmt = _hmt || [];
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/../../src/img/website/hexo-05-01.jpg" alt=""></p>
+            <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/website/hexo-05-01.jpg" alt=""></p>
 <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><p>本文将会从零开始开发一个简单的博客主题。样式主要参考 <a href="https://hexo.io/themes/" target="_blank" rel="noopener">Hexo theme</a> 中的 <a href="https://github.com/lotabout/hexo-theme-noise" target="_blank" rel="noopener">Noise</a> 主题。</p>
 <p>开始之前你需要了解：</p>
 <ul>
@@ -207,7 +207,7 @@ var _hmt = _hmt || [];
 <p>修改站点配置文件中的主题配置，使用我们刚刚创建的 <code>theme-example</code> 主题：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Extensions</span><br><span class="line">## Plugins: https://hexo.io/plugins/</span><br><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: theme-example</span><br></pre></td></tr></table></figure>
 <p>运行 <code>hexo server --debug</code> 以 debug 模式开启 Hexo 本地服务器预览，访问 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>。</p>
-<p><img src="/../../src/img/website/hexo-05-02.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/website/hexo-05-02.jpg" alt=""></p>
 <h2 id="添加页面导航"><a href="#添加页面导航" class="headerlink" title="添加页面导航"></a>添加页面导航</h2><p>现在我们需要在页面中添加导航，由于导航不单单会在首页出现，所以我们在 <code>layout</code> 中创建共用的布局文件 <code>layout.ejs</code>， 同时创建 <code>_partial/head.ejs</code> 保存 HTML 的 head 以及创建 <code>_partial/header.ejs</code> 文件，编写页面导航部分。</p>
 <p><code>layout/layout.ejs</code>:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">  &lt;%- partial(<span class="string">'_partial/head'</span>) %&gt;</span><br><span class="line">  &lt;body&gt;</span><br><span class="line">    &lt;%- partial(<span class="string">'_partial/header'</span>) %&gt;</span><br><span class="line">    &lt;main <span class="class"><span class="keyword">class</span></span>=<span class="string">"main"</span>&gt;</span><br><span class="line">      &lt;%- body %&gt;</span><br><span class="line">    &lt;<span class="regexp">/main&gt;</span></span><br><span class="line"><span class="regexp">  &lt;/</span>body&gt;</span><br><span class="line">&lt;<span class="regexp">/html&gt;</span></span><br></pre></td></tr></table></figure>
@@ -218,7 +218,7 @@ var _hmt = _hmt || [];
 <p><code>layout/_partial/header.ejs</code>:</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;header <span class="class"><span class="keyword">class</span></span>=<span class="string">"header"</span>&gt;</span><br><span class="line">  &lt;div <span class="class"><span class="keyword">class</span></span>=<span class="string">"blog-title"</span>&gt;</span><br><span class="line">    &lt;a href=<span class="string">"&lt;%- url_for() %&gt;"</span> <span class="class"><span class="keyword">class</span></span>=<span class="string">"logo"</span>&gt;<span class="xml"><span class="tag">&lt;<span class="name">%=</span> <span class="attr">config.title</span> %&gt;</span><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span></span><br><span class="line">  &lt;<span class="regexp">/div&gt;</span></span><br><span class="line"><span class="regexp">  &lt;nav class="navbar"&gt;</span></span><br><span class="line"><span class="regexp">    &lt;ul class="menu"&gt;</span></span><br><span class="line"><span class="regexp">      &lt;li class="menu-item"&gt;</span></span><br><span class="line"><span class="regexp">        &lt;a href="/</span><span class="string">" class="</span>menu-item-link<span class="string">"&gt;Home&lt;/a&gt;</span></span><br><span class="line"><span class="string">      &lt;/li&gt;</span></span><br><span class="line"><span class="string">      &lt;li class="</span>menu-item<span class="string">"&gt;</span></span><br><span class="line"><span class="string">        &lt;a href="</span>/archives<span class="string">" class="</span>menu-item-link<span class="string">"&gt;Archive&lt;/a&gt;</span></span><br><span class="line"><span class="string">      &lt;/li&gt;</span></span><br><span class="line"><span class="string">    &lt;/ul&gt;</span></span><br><span class="line"><span class="string">  &lt;/nav&gt;</span></span><br><span class="line"><span class="string">&lt;/header&gt;</span></span><br></pre></td></tr></table></figure>
 <p>接着我们清空 <code>index.ejs</code> 中的内容，并添加 <code>&lt;h2&gt;Hello World&lt;/h2&gt;</code>。在 <code>layout</code> 目录下的 <code>index.ejs</code> 会自动继承 <code>layout.ejs</code>，并将其中的内容填入 <code>&lt;%- body %&gt;</code> 的位置。我们将得到一个有导航菜单的 Hello World 页面。</p>
-<p><img src="/../../src/img/website/hexo-05-03.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/website/hexo-05-03.jpg" alt=""></p>
 <h2 id="添加主题配置文件"><a href="#添加主题配置文件" class="headerlink" title="添加主题配置文件"></a>添加主题配置文件</h2><p>实际上我们需要让导航菜单根据我们的需要显示不同的项，上面这种写法不方便修改。所以我们会在主题的配置文件中添加导航菜单的配置。在 <code>thmem-demo</code> 下新建主题的配置文件 <code>_config.yml</code>，在其中添加需要配置的字段。然后可以通过 <code>theme</code> 这个变量来拿到该配置文件中的配置。</p>
 <p><code>theme-demo/_config.yml</code>:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  Home: /</span><br><span class="line">  Archives: /archives</span><br></pre></td></tr></table></figure>
@@ -247,7 +247,7 @@ var _hmt = _hmt || [];
 <p><code>layout/_partial/head.ejs</code></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=utf-8&quot;&gt;</span><br><span class="line">  &lt;meta content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0&quot; name=&quot;viewport&quot;&gt;</span><br><span class="line">  &lt;title&gt;&lt;%= config.title %&gt;&lt;/title&gt;</span><br><span class="line">  &lt;%- css(&apos;css/style.css&apos;) %&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure>
 <p>至此，我们会看到站点的首页是这个样子的：</p>
-<p><img src="/../../src/img/website/hexo-05-04.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/website/hexo-05-04.jpg" alt=""></p>
 <h2 id="添加分页"><a href="#添加分页" class="headerlink" title="添加分页"></a>添加分页</h2><p>在站点的 <code>source/_post/</code> 目录下存放的是我们的文章，现在我们把原本的 <code>hello-world.md</code> 复制黏贴 10+ 次，再查看站点首页。会发现，首页只显示了 10 篇文章。</p>
 <p>首页显示的文章数量我们可以通过站点配置文件中的 <code>per_page</code> 字段来修改，但是我们不可能把所有文章都放在一页，所以我们现在来添加文章列表的分页。</p>
 <p>新建 <code>_partial/paginator.ejs</code>:</p>
@@ -286,7 +286,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/website/hexo-05.html" data-id="cjhrsi393002310vqutpuc4gv" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/website/hexo-05.html" data-id="cjht4nye50023dgvqkfn6863b" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -458,7 +458,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/25.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
     
     
 </a>
@@ -478,7 +478,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/24.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
     
     
 </a>
@@ -498,7 +498,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/23.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
     
     
 </a>
@@ -518,7 +518,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/19.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
     
     
 </a>
@@ -538,7 +538,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/18.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
     
     
 </a>

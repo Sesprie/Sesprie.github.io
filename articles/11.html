@@ -40,12 +40,12 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="12345678910111213141516171819202122232425262728//Math.random()可以产生(0,1)之间的随机数，不包括0和1//Math.floor()向下取整，例如对61.9取整的结果为61，对-6.9取取整的结果为-7，所有需要将字符串的长度+1再与Math.random()相乘，否则取不到最后一个字符function createString(c">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/src/img/articles/11/photo-1508426494465-6ff39a96b4c7.jpg">
-<meta property="og:updated_time" content="2018-04-25T08:07:59.573Z">
+<meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/11/photo-1508426494465-6ff39a96b4c7.jpg">
+<meta property="og:updated_time" content="2018-05-30T13:02:09.462Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="用javascript生成由大小写字母组成指定数量的字符串">
 <meta name="twitter:description" content="12345678910111213141516171819202122232425262728//Math.random()可以产生(0,1)之间的随机数，不包括0和1//Math.floor()向下取整，例如对61.9取整的结果为61，对-6.9取取整的结果为-7，所有需要将字符串的长度+1再与Math.random()相乘，否则取不到最后一个字符function createString(c">
-<meta name="twitter:image" content="http://yoursite.com/src/img/articles/11/photo-1508426494465-6ff39a96b4c7.jpg">
+<meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/11/photo-1508426494465-6ff39a96b4c7.jpg">
     
 
     
@@ -188,9 +188,9 @@ var _hmt = _hmt || [];
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/../../src/img/articles/11/photo-1508426494465-6ff39a96b4c7.jpg" alt=""></p>
+            <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/11/photo-1508426494465-6ff39a96b4c7.jpg" alt=""></p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Math.random()可以产生(0,1)之间的随机数，不包括0和1</span></span><br><span class="line"><span class="comment">//Math.floor()向下取整，例如对61.9取整的结果为61，对-6.9取取整的结果为-7，所有需要将字符串的长度+1再与Math.random()相乘，否则取不到最后一个字符</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">createString</span>(<span class="params">count</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> text = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">var</span> string_tmp = <span class="string">"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123546789"</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; count; i++)&#123;</span><br><span class="line">        text += string_tmp.charAt(<span class="built_in">Math</span>.floor(<span class="built_in">Math</span>.random() * (string_tmp.length+<span class="number">1</span>)));</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> text;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//输出10个长度为11的字符串</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x = <span class="number">0</span>; x &lt; <span class="number">10</span>; x++)&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(createString(<span class="number">11</span>));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">//长度为11时，可能的输出结果的数量</span></span><br><span class="line"><span class="keyword">var</span> y = <span class="number">1</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">11</span>; i++)&#123;</span><br><span class="line">    y = y*<span class="number">62</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">"11位字符串的数量: "</span> + y)</span><br></pre></td></tr></table></figure>
-<p><img src="/../../src/img/articles/11/2018-04-24_142738.jpg" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/11/2018-04-24_142738.jpg" alt=""></p>
 
         </div>
         <footer class="article-footer">
@@ -198,7 +198,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/articles/11.html" data-id="cjhrsi37c000610vqucg2zadz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/articles/11.html" data-id="cjht4nycf0005dgvqp2xxislt" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -370,7 +370,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/25.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
     
     
 </a>
@@ -390,7 +390,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/24.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
     
     
 </a>
@@ -410,7 +410,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/23.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
     
     
 </a>
@@ -430,7 +430,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/19.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
     
     
 </a>
@@ -450,7 +450,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/18.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
     
     
 </a>

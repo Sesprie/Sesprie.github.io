@@ -40,12 +40,12 @@ var _hmt = _hmt || [];
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="123456FILE *fp;while(!feof(fp))&amp;#123;    fscanf(fp,&quot;%s%d%lf&quot;,a,&amp;amp;b,&amp;amp;c);//这里%s对应的a不需要加上取地址符号&amp;amp;，因为a为数组名称，其本身就表示该数组的首地址    printf（&quot;%s%d%lf&quot;,a,b,c）&amp;#125; fscanf能正确操作的txt文件编码方式为ANSI，以下编码方式均不能使函数">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/src/img/c_cpp/c_cpp-01-01.jpg">
-<meta property="og:updated_time" content="2018-04-24T06:34:10.306Z">
+<meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/c_cpp/c_cpp-01-01.jpg">
+<meta property="og:updated_time" content="2018-05-30T13:06:18.647Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="fscanf()函数基本用法">
 <meta name="twitter:description" content="123456FILE *fp;while(!feof(fp))&amp;#123;    fscanf(fp,&quot;%s%d%lf&quot;,a,&amp;amp;b,&amp;amp;c);//这里%s对应的a不需要加上取地址符号&amp;amp;，因为a为数组名称，其本身就表示该数组的首地址    printf（&quot;%s%d%lf&quot;,a,b,c）&amp;#125; fscanf能正确操作的txt文件编码方式为ANSI，以下编码方式均不能使函数">
-<meta name="twitter:image" content="http://yoursite.com/src/img/c_cpp/c_cpp-01-01.jpg">
+<meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/c_cpp/c_cpp-01-01.jpg">
     
 
     
@@ -188,7 +188,7 @@ var _hmt = _hmt || [];
         
         
         <div class="article-entry" itemprop="articleBody">
-            <p><img src="/../../src/img/c_cpp/c_cpp-01-01.jpg" alt=""></p>
+            <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/c_cpp/c_cpp-01-01.jpg" alt=""></p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line"><span class="keyword">while</span>(!feof(fp))</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">fscanf</span>(fp,<span class="string">"%s%d%lf"</span>,a,&amp;b,&amp;c);<span class="comment">//这里%s对应的a不需要加上取地址符号&amp;，因为a为数组名称，其本身就表示该数组的首地址</span></span><br><span class="line">    <span class="built_in">printf</span>（<span class="string">"%s%d%lf"</span>,a,b,c）</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p><code>fscanf</code>能正确操作的txt文件编码方式为<code>ANSI</code>，以下编码方式均不能使函数正常执行：<del>UTF-8，Unicode，Unicode big endian</del></p>
 <p>这里假如说txt文本内的内容为（对应上面三个数据来写）：</p>
@@ -196,7 +196,7 @@ var _hmt = _hmt || [];
 <p>这里数据与数据之间需要以制表符/或者空格分开即可，数据之间就像<code>scanf()</code>函数一样，若以逗号分隔数据，则<code>scanf</code>中也需要加入逗号，例如<code>scanf(&quot;%d,%d&quot;,a,b);</code>再输入数据时就要输入1,5才能正确输入</p>
 <p>但这里尝试<code>fscanf()</code>函数之后并未能出现同样的效果，以后解决了再更新</p>
 <p>上菜展示一下效果：</p>
-<p><img src="/../../src/img/c_cpp/c_cpp-01-02.png" alt=""></p>
+<p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/c_cpp/c_cpp-01-02.png" alt=""></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    <span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">double</span> height;</span><br><span class="line">    FILE *fp;</span><br><span class="line">    fp = fopen(<span class="string">"d:\\1.txt"</span>, <span class="string">"r+"</span>);<span class="comment">//“r+” 以可读写方式打开文件，该文件必须存在,d:\\1.txt表示d盘根目录下的1.txt文件</span></span><br><span class="line">    <span class="keyword">if</span> (fp == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"Cannot open the file!\n"</span>);</span><br><span class="line">        <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"学号\t姓名\t身高\n"</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (!feof(fp))</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">fscanf</span>(fp, <span class="string">"%d%s%lf"</span>, &amp;num, name, &amp;height);</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\t%s\t%g"</span>, num, name, height);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"\n"</span>);</span><br><span class="line">    fclose(fp);<span class="comment">//要记得关闭文件</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
@@ -205,7 +205,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/c_cpp/c_cpp-01.html" data-id="cjhrsi388001910vq9xr7ag54" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/c_cpp/c_cpp-01.html" data-id="cjht4nyda0018dgvqks4n4xqx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -377,7 +377,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/25.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/25/9be3b3ae5a.jpg)" alt="百度网盘下载器 --- 度盘下载器" class="thumbnail-image"></span>
     
     
 </a>
@@ -397,7 +397,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/24.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
     
     
 </a>
@@ -417,7 +417,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/23.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/23/photo-1516290881724-2230498ea247.jpg)" alt="Wget常用参数" class="thumbnail-image"></span>
     
     
 </a>
@@ -437,7 +437,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/19.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/19/photo-1517965319782-7b911f164cc2.jpg)" alt="Hexo主题折腾汇总" class="thumbnail-image"></span>
     
     
 </a>
@@ -457,7 +457,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/18.html" class="thumbnail">
     
     
-        <span style="background-image:url(/../../src/img/articles/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/18/photo-1518717202715-9fa9d099f58a.jpg)" alt="百度网盘高速下载器" class="thumbnail-image"></span>
     
     
 </a>
