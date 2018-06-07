@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--
+
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
   (adsbygoogle = window.adsbygoogle || []).push({
@@ -9,7 +9,9 @@
     enable_page_level_ads: true
   });
 </script>
--->
+
+
+
 
 <script>
 var _hmt = _hmt || [];
@@ -191,10 +193,10 @@ var _hmt = _hmt || [];
             <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/20/hexo-10-01.jpg" alt=""></p>
 <p>别看了，这张图不会动的，，，，</p>
 <p><strong>1.</strong>这里以<code>hueman</code>主题为例，打开<code>/themes/hueman/layout/layout.ejs</code>，添加下面的一坨代码在<code>body</code>中（如果js的link失效，文末有下载连接），</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.canvas_nest %&#125;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.canvas_nest %&#125;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <p>如果使用本地<code>js</code>，可以复制<code>js</code>代码，到主题文件夹下的<code>/source/js</code>目录下</p>
 <p>再将上面的代码改为</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.canvas_nest %&#125;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/canvas-nest.min.js"</span>&gt;<span class="xml"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&#123;% <span class="keyword">if</span> theme.canvas_nest %&#125;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"/js/canvas-nest.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>2.</strong>更改配置文件</p>
 <p>打开主题目录下的<code>_config.yml</code>，在尾部添加下列代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">canvas_nest: true</span><br></pre></td></tr></table></figure>
@@ -209,7 +211,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/articles/20.html" data-id="cji2ebhxs001h64ur5rxfv11z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/articles/20.html" data-id="cji4emgn6000ss0urvnj8hl8z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
