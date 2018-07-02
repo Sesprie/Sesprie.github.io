@@ -34,19 +34,19 @@ var _hmt = _hmt || [];
     
         <meta name="keywords" content="Python" />
     
-    <meta name="description" content="1234567891011# 作用：递归遍历多层列表def recursive(ns):    # if type(ns) is list:    if isinstance(ns, list):        for i in ns:            yield from recursive(i) # 此处的yield from 可以理解为起到了一个管道的传递作用,不断地将内层的yiel">
+    <meta name="description" content="123456789101112# 作用：递归遍历多层嵌套列表内的值到一个列表# yield from iterable本质上等于for item in iterable: yield item的缩写版，yield from的作用对象是iterabledef recursive(ns):    # if type(ns) is list:    if isinstance(ns, list):">
 <meta name="keywords" content="Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python - yield from 的作用">
 <meta property="og:url" content="http://yoursite.com/articles/29.html">
 <meta property="og:site_name" content="Sesprie">
-<meta property="og:description" content="1234567891011# 作用：递归遍历多层列表def recursive(ns):    # if type(ns) is list:    if isinstance(ns, list):        for i in ns:            yield from recursive(i) # 此处的yield from 可以理解为起到了一个管道的传递作用,不断地将内层的yiel">
+<meta property="og:description" content="123456789101112# 作用：递归遍历多层嵌套列表内的值到一个列表# yield from iterable本质上等于for item in iterable: yield item的缩写版，yield from的作用对象是iterabledef recursive(ns):    # if type(ns) is list:    if isinstance(ns, list):">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/29/2757a671f5.jpg">
-<meta property="og:updated_time" content="2018-07-01T07:59:10.766Z">
+<meta property="og:updated_time" content="2018-07-01T13:22:40.664Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python - yield from 的作用">
-<meta name="twitter:description" content="1234567891011# 作用：递归遍历多层列表def recursive(ns):    # if type(ns) is list:    if isinstance(ns, list):        for i in ns:            yield from recursive(i) # 此处的yield from 可以理解为起到了一个管道的传递作用,不断地将内层的yiel">
+<meta name="twitter:description" content="123456789101112# 作用：递归遍历多层嵌套列表内的值到一个列表# yield from iterable本质上等于for item in iterable: yield item的缩写版，yield from的作用对象是iterabledef recursive(ns):    # if type(ns) is list:    if isinstance(ns, list):">
 <meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/29/2757a671f5.jpg">
     
 
@@ -191,7 +191,10 @@ var _hmt = _hmt || [];
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/29/2757a671f5.jpg" alt=""></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 作用：递归遍历多层列表</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recursive</span><span class="params">(ns)</span>:</span></span><br><span class="line">    <span class="comment"># if type(ns) is list:</span></span><br><span class="line">    <span class="keyword">if</span> isinstance(ns, list):</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> ns:</span><br><span class="line">            <span class="keyword">yield</span> <span class="keyword">from</span> recursive(i) <span class="comment"># 此处的yield from 可以理解为起到了一个管道的传递作用,不断地将内层的yield的值传递出去</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">yield</span> ns <span class="comment"># 如果上面递归的时候不加yield from，这里yield不会有任何作用</span></span><br><span class="line"></span><br><span class="line">ns1 = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[[<span class="number">4</span>,<span class="number">5</span>],[<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]],[<span class="number">9</span>,<span class="number">10</span>], <span class="number">11</span>]</span><br><span class="line">list(recursive(ns1)) <span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 作用：递归遍历多层嵌套列表内的值到一个列表</span></span><br><span class="line"><span class="comment"># yield from iterable本质上等于for item in iterable: yield item的缩写版，yield from的作用对象是iterable</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">recursive</span><span class="params">(ns)</span>:</span></span><br><span class="line">    <span class="comment"># if type(ns) is list:</span></span><br><span class="line">    <span class="keyword">if</span> isinstance(ns, list):</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> ns:</span><br><span class="line">            <span class="keyword">yield</span> <span class="keyword">from</span> recursive(i) <span class="comment"># 此处的yield from 可以理解为起到了一个管道的传递作用,不断地将内层的iterable生成的值传递出去</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">yield</span> ns <span class="comment"># 如果上面递归的时候不加yield from，这里yield不会有任何作用</span></span><br><span class="line"></span><br><span class="line">ns1 = [[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],[[<span class="number">4</span>,<span class="number">5</span>],[<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>]],[<span class="number">9</span>,<span class="number">10</span>], <span class="number">11</span>]</span><br><span class="line">list(recursive(ns1)) <span class="comment"># [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]</span></span><br></pre></td></tr></table></figure>
+<p>参考：</p>
+<p><a href="https://www.cnblogs.com/cdma/p/6839640.html" target="_blank" rel="noopener">python yield 和 yield from用法总结</a></p>
+<p><a href="http://simeonvisser.com/posts/python-3-using-yield-from-in-generators-part-1.html" target="_blank" rel="noopener">Python 3: Using “yield from” in Generators - Part 1</a></p>
 
         </div>
         <footer class="article-footer">
@@ -199,7 +202,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/articles/29.html" data-id="cjj2jr84q0016dgckmh34keif" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/articles/29.html" data-id="cjj3khjx3001hvgckksdcbdm9" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -336,6 +339,16 @@ var _hmt = _hmt || [];
         
 <nav id="article-nav">
     
+        <a href="/articles/30.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            python - jieba库的简单使用
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/articles/28.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
@@ -354,6 +367,26 @@ var _hmt = _hmt || [];
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/articles/30.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/30/photo-1506269351850-0428eaed2193.jpg)" alt="python - jieba库的简单使用" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/articles/30.html" class="title">python - jieba库的简单使用</a></p>
+                            <p class="item-date"><time datetime="2018-07-02T01:01:54.456Z" itemprop="datePublished">2018-07-02</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -435,26 +468,6 @@ var _hmt = _hmt || [];
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/articles/24.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/24/ywi9xmmYtEE.png)" alt="vultr注册送$25，可用一年" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/articles/24.html" class="title">vultr注册送$25，可用一年</a></p>
-                            <p class="item-date"><time datetime="2018-05-06T07:04:59.345Z" itemprop="datePublished">2018-05-06</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -474,7 +487,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
