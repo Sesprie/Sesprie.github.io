@@ -24,7 +24,7 @@ var _hmt = _hmt || [];
 </script>
     <meta charset="utf-8">
     
-    <title>mysql - 初见mysql8.0 windows中的安装 | Sesprie</title>
+    <title>mysql - 初见mysql8.0之windows中的安装 | Sesprie</title>
     
     
     <!--�Զ��嶥����������ɫ-->
@@ -37,15 +37,15 @@ var _hmt = _hmt || [];
     <meta name="description" content="最近，开始学习mysql，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到https://dev.mysql.com/downloads/mysql/下载最新版mysql，下载后解压到你想放置的文件夹，在文件夹内新建    my.ini填入一下内容 123[mysqld]basedir=D:/mysql-8.0.11-winx64datadir=D">
 <meta name="keywords" content="Mysql">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysql - 初见mysql8.0 windows中的安装">
+<meta property="og:title" content="mysql - 初见mysql8.0之windows中的安装">
 <meta property="og:url" content="http://yoursite.com/articles/32.html">
 <meta property="og:site_name" content="Sesprie">
 <meta property="og:description" content="最近，开始学习mysql，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到https://dev.mysql.com/downloads/mysql/下载最新版mysql，下载后解压到你想放置的文件夹，在文件夹内新建    my.ini填入一下内容 123[mysqld]basedir=D:/mysql-8.0.11-winx64datadir=D">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/32/434adb3931.jpg">
-<meta property="og:updated_time" content="2018-07-03T11:11:03.642Z">
+<meta property="og:updated_time" content="2018-07-04T01:38:34.176Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="mysql - 初见mysql8.0 windows中的安装">
+<meta name="twitter:title" content="mysql - 初见mysql8.0之windows中的安装">
 <meta name="twitter:description" content="最近，开始学习mysql，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到https://dev.mysql.com/downloads/mysql/下载最新版mysql，下载后解压到你想放置的文件夹，在文件夹内新建    my.ini填入一下内容 123[mysqld]basedir=D:/mysql-8.0.11-winx64datadir=D">
 <meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/32/434adb3931.jpg">
     
@@ -165,7 +165,7 @@ var _hmt = _hmt || [];
                 
     
         <h1 class="article-title" itemprop="name">
-        mysql - 初见mysql8.0 windows中的安装
+        mysql - 初见mysql8.0之windows中的安装
         </h1>
     
 
@@ -197,8 +197,9 @@ var _hmt = _hmt || [];
 <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/32/2018-07-03_185426.jpg" alt=""></p>
 <p><code>以管理员身份</code>打开命令行，进入到<code>D:/mysql-8.0.11-winx64/bin</code>目录</p>
 <p><code>依次输入以下命令:</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysqld -install # 安装mysql</span><br><span class="line">mysqld --initialize-insecure # 初始化，此处会自动生成data目录</span><br><span class="line">net start mysql # 启动mysql服务</span><br><span class="line"># 如果启动成功，继续输入下面的命令，注意：此处使用的是8.0版本，5.27的版本默认有随机密码，具体百度查询一下</span><br><span class="line">mysql -u root -q # 命令执行后，需要输入密码，直接回车即可</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mysqld -install # 安装mysql</span><br><span class="line">mysqld --initialize-insecure # 初始化，此处会自动生成data目录</span><br><span class="line">net start mysql # 启动mysql服务</span><br><span class="line"># 如果启动成功，继续输入下面的命令，注意：此处使用的是8.0版本，5.27的版本默认有随机密码，具体百度查询一下</span><br><span class="line">mysql -u root -q # 进入mysql, 命令执行后，需要输入密码，直接回车即可</span><br></pre></td></tr></table></figure>
 <p>另注：网上有的说有初始随机密码的话需要加上<code>skip-grant-tables</code>，这个在有的版本中会导致<code>mysql</code>启动之后会立即停止，比如这里的8.0版本，不过这里没有密码，也不需要添加这一句</p>
+<h5 id="查看端口号"><a href="#查看端口号" class="headerlink" title="查看端口号"></a>查看端口号</h5><p><code>show global variables like &#39;port&#39;;</code></p>
 <p>参考：<a href="https://jingyan.baidu.com/article/da1091fb1a46a6027849d6a8.html" target="_blank" rel="noopener">mysql无法启动 服务没有报告任何错误_百度经验</a></p>
 
         </div>
@@ -207,7 +208,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/articles/32.html" data-id="cjj5lf0ku001alock98paqgbi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/articles/32.html" data-id="cjj6gy9me001yj4ckybkndw9y" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -344,6 +345,16 @@ var _hmt = _hmt || [];
         
 <nav id="article-nav">
     
+        <a href="/articles/33.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            抛弃cmd，投向git和cmder的怀抱
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/articles/31.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
@@ -366,10 +377,10 @@ var _hmt = _hmt || [];
                     <li>
                         
                         <div class="item-thumbnail">
-                            <a href="/articles/32.html" class="thumbnail">
+                            <a href="/articles/33.html" class="thumbnail">
     
     
-        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/32/434adb3931.jpg)" alt="mysql - 初见mysql8.0 windows中的安装" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/33/photo-1495287949939-c5d3daf1cab4.jpg)" alt="抛弃cmd，投向git和cmder的怀抱" class="thumbnail-image"></span>
     
     
 </a>
@@ -378,7 +389,27 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/articles/32.html" class="title">mysql - 初见mysql8.0 windows中的安装</a></p>
+                            <p class="item-title"><a href="/articles/33.html" class="title">抛弃cmd，投向git和cmder的怀抱</a></p>
+                            <p class="item-date"><time datetime="2018-07-04T01:36:24.903Z" itemprop="datePublished">2018-07-04</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/articles/32.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/32/434adb3931.jpg)" alt="mysql - 初见mysql8.0之windows中的安装" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/articles/32.html" class="title">mysql - 初见mysql8.0之windows中的安装</a></p>
                             <p class="item-date"><time datetime="2018-07-03T10:43:54.248Z" itemprop="datePublished">2018-07-03</time></p>
                         </div>
                     </li>
@@ -443,26 +474,6 @@ var _hmt = _hmt || [];
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/articles/28.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/28/photo-1507442139473-042ef20b25c6.jpg)" alt="Linux - find命令" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/articles/28.html" class="title">Linux - find命令</a></p>
-                            <p class="item-date"><time datetime="2018-06-29T06:40:29.688Z" itemprop="datePublished">2018-06-29</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -482,7 +493,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -492,7 +503,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/Command/" style="font-size: 10px;">Command</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Dos/" style="font-size: 14px;">Dos</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Java/" style="font-size: 12px;">Java</a> <a href="/tags/Javascript/" style="font-size: 12px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Sublime/" style="font-size: 10px;">Sublime</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/Vps/" style="font-size: 10px;">Vps</a> <a href="/tags/Wget/" style="font-size: 10px;">Wget</a> <a href="/tags/Windows/" style="font-size: 12px;">Windows</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/抓包/" style="font-size: 14px;">抓包</a> <a href="/tags/未分类/" style="font-size: 10px;">未分类</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/爬虫/" style="font-size: 16px;">爬虫</a> <a href="/tags/百度网盘/" style="font-size: 12px;">百度网盘</a> <a href="/tags/计算机基础/" style="font-size: 10px;">计算机基础</a>
+            <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/Command/" style="font-size: 10px;">Command</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Dos/" style="font-size: 14px;">Dos</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Java/" style="font-size: 12px;">Java</a> <a href="/tags/Javascript/" style="font-size: 12px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Sublime/" style="font-size: 10px;">Sublime</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/Vps/" style="font-size: 10px;">Vps</a> <a href="/tags/Wget/" style="font-size: 10px;">Wget</a> <a href="/tags/Windows/" style="font-size: 12px;">Windows</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/抓包/" style="font-size: 14px;">抓包</a> <a href="/tags/未分类/" style="font-size: 10px;">未分类</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/爬虫/" style="font-size: 16px;">爬虫</a> <a href="/tags/百度网盘/" style="font-size: 12px;">百度网盘</a> <a href="/tags/计算机基础/" style="font-size: 10px;">计算机基础</a>
         </div>
     </div>
 
