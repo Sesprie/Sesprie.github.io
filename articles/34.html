@@ -34,19 +34,19 @@ var _hmt = _hmt || [];
     
         <meta name="keywords" content="编程题" />
     
-    <meta name="description" content="一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。  1fib = lambda n: n if n &amp;lt;= 2 else fib(n - 1) + fib(n - 2) 1234567891011121314def memo(func):    cache = &amp;#123;&amp;#125;    def wrap(*args):        if ar">
+    <meta name="description" content="台阶问题一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。  12# 递归，简洁，但是有大量的重复计算，效率低fib = lambda n: n if n &amp;lt;= 2 else fib(n - 1) + fib(n - 2) 1234567891011121314def memo(func):    cache = &amp;#123;&amp;#125;    de">
 <meta name="keywords" content="编程题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="台阶问题&#x2F;斐波那契">
 <meta property="og:url" content="http://yoursite.com/articles/34.html">
 <meta property="og:site_name" content="Sesprie">
-<meta property="og:description" content="一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。  1fib = lambda n: n if n &amp;lt;= 2 else fib(n - 1) + fib(n - 2) 1234567891011121314def memo(func):    cache = &amp;#123;&amp;#125;    def wrap(*args):        if ar">
+<meta property="og:description" content="台阶问题一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。  12# 递归，简洁，但是有大量的重复计算，效率低fib = lambda n: n if n &amp;lt;= 2 else fib(n - 1) + fib(n - 2) 1234567891011121314def memo(func):    cache = &amp;#123;&amp;#125;    de">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/34/mwxK69sPzpu3l2J1qwG6.jpg">
-<meta property="og:updated_time" content="2018-07-13T13:04:09.680Z">
+<meta property="og:updated_time" content="2018-07-14T06:14:03.225Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="台阶问题&#x2F;斐波那契">
-<meta name="twitter:description" content="一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。  1fib = lambda n: n if n &amp;lt;= 2 else fib(n - 1) + fib(n - 2) 1234567891011121314def memo(func):    cache = &amp;#123;&amp;#125;    def wrap(*args):        if ar">
+<meta name="twitter:description" content="台阶问题一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。  12# 递归，简洁，但是有大量的重复计算，效率低fib = lambda n: n if n &amp;lt;= 2 else fib(n - 1) + fib(n - 2) 1234567891011121314def memo(func):    cache = &amp;#123;&amp;#125;    de">
 <meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/34/mwxK69sPzpu3l2J1qwG6.jpg">
     
 
@@ -191,15 +191,34 @@ var _hmt = _hmt || [];
         
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/34/mwxK69sPzpu3l2J1qwG6.jpg" alt=""></p>
-<h3 style="color:red">一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。</h3>
+<h5 id="台阶问题"><a href="#台阶问题" class="headerlink" title="台阶问题"></a>台阶问题</h5><h4 style="color:red">一只青蛙一次可以跳上1级台阶，也可以跳上2级。求该青蛙跳上一个n级的台阶总共有多少种跳法。</h4>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fib = <span class="keyword">lambda</span> n: n <span class="keyword">if</span> n &lt;= <span class="number">2</span> <span class="keyword">else</span> fib(n - <span class="number">1</span>) + fib(n - <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 递归，简洁，但是有大量的重复计算，效率低</span></span><br><span class="line">fib = <span class="keyword">lambda</span> n: n <span class="keyword">if</span> n &lt;= <span class="number">2</span> <span class="keyword">else</span> fib(n - <span class="number">1</span>) + fib(n - <span class="number">2</span>)</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">memo</span><span class="params">(func)</span>:</span></span><br><span class="line">    cache = &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">wrap</span><span class="params">(*args)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> args <span class="keyword">not</span> <span class="keyword">in</span> cache:</span><br><span class="line">            cache[args] = func(*args)</span><br><span class="line">        <span class="keyword">return</span> cache[args]</span><br><span class="line">    <span class="keyword">return</span> wrap</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">@memo</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(i)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> i &lt; <span class="number">2</span>:</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span></span><br><span class="line">    <span class="keyword">return</span> fib(i<span class="number">-1</span>) + fib(i<span class="number">-2</span>)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(n)</span>:</span></span><br><span class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> xrange(n):</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">    <span class="keyword">return</span> b</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 效率高</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(n)</span>:</span></span><br><span class="line">    a, b = <span class="number">0</span>, <span class="number">1</span></span><br><span class="line">    <span class="keyword">for</span> _ <span class="keyword">in</span> xrange(n):</span><br><span class="line">        a, b = b, a + b</span><br><span class="line">    <span class="keyword">return</span> b</span><br></pre></td></tr></table></figure>
 <p>死活想不出来，</p>
 <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/34/Screenshot_20180713204633.png" alt="留下了没有技术的泪水"></p>
-<p>让我想起了当初的汉诺塔问题，将没有头绪的大的问题分解为若干可解决的小问题</p>
-<p><strong><a href="https://github.com/taizilongxu/interview_python#1-%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91" target="_blank" rel="noopener">题目来源</a></strong></p>
+<p>让我想起了当初接触汉诺塔时的情景</p>
+<h5 id="变态台阶问题"><a href="#变态台阶问题" class="headerlink" title="变态台阶问题"></a>变态台阶问题</h5><blockquote>
+<h4 style="color:red">题目描述： 一个台阶总共有n级，如果一次可以跳1级，也可以跳2级……也可以跳n级。求总共有多少总跳法，并分析算法的时间复杂度。</h4>
+
+<p><strong>分析：</strong>用Fib(n)表示跳上n阶台阶的跳法数。如果按照定义，Fib(0)肯定需要为0，否则没有意义。但是我们设定Fib(0) = 1；n = 0是特殊情况，通过下面的分析就会知道，强制令Fib(0) = 1很有好处。ps. Fib(0)等于几都不影响我们解题，但是会影响我们下面的分析理解。</p>
+<p>当n = 1 时， 只有一种跳法，即1阶跳：Fib(1) = 1;</p>
+<p>当n = 2 时， 有两种跳的方式，一阶跳和二阶跳：Fib(2)  = 2;</p>
+<p>到这里为止，和普通跳台阶是一样的。</p>
+<p>当n = 3 时，有三种跳的方式，第一次跳出一阶后，对应Fib(3-1)种跳法； 第一次跳出二阶后，对应Fib(3-2)种跳法；第一次跳出三阶后，只有这一种跳法。Fib(3) = Fib(2) + Fib(1)+ 1 = Fib(2) + Fib(1) + Fib(0) = 4;</p>
+<p>当n = 4时，有四种方式：第一次跳出一阶，对应Fib(4-1)种跳法；第一次跳出二阶，对应Fib(4-2)种跳法；第一次跳出三阶，对应Fib(4-3)种跳法；第一次跳出四阶，只有这一种跳法。所以，Fib(4) = Fib(4-1) + Fib(4-2) + Fib(4-3) + 1 = Fib(4-1) + Fib(4-2) + Fib(4-3) + Fib(4-4) 种跳法。</p>
+<p>当n = n 时，共有n种跳的方式，第一次跳出一阶后，后面还有Fib(n-1)中跳法； 第一次跳出二阶后，后面还有Fib(n-2)中跳法……………………..第一次跳出n阶后，后面还有 Fib(n-n)中跳法。Fib(n) = Fib(n-1)+Fib(n-2)+Fib(n-3)+……….+Fib(n-n) = Fib(0)+Fib(1)+Fib(2)+…….+Fib(n-1)。</p>
+<p>通过上述分析，我们就得到了通项公式：</p>
+<pre><code>Fib(n) =  Fib(0)+Fib(1)+Fib(2)+.......+ Fib(n-2) + Fib(n-1)
+</code></pre><p>因此，有<code>Fib(n-1)=Fib(0)+Fib(1)+Fib(2)+.......+Fib(n-2)</code></p>
+<p>两式相减得：<code>Fib(n)-Fib(n-1) = Fib(n-1)         =====&gt;       Fib(n) = 2*Fib(n-1)     n &gt;= 3</code></p>
+<p>这就是我们需要的递推公式：<strong>Fib(n) = 2*Fib(n-1)     n &gt;= 3</strong></p>
+</blockquote>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fib</span><span class="params">(n)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">2</span>**(n<span class="number">-1</span>) <span class="keyword">if</span> n&gt;<span class="number">0</span> <span class="keyword">else</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+<p>参考：</p>
+<p><strong><a href="https://blog.csdn.net/friendbkf/article/details/50060239" target="_blank" rel="noopener">跳台阶问题 + 变态跳台阶问题 解法（动态规划递归 + 非递归）</a></strong></p>
+<p><strong><a href="https://github.com/taizilongxu/interview_python#1-%E5%8F%B0%E9%98%B6%E9%97%AE%E9%A2%98%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91" target="_blank" rel="noopener">台阶问题</a></strong></p>
 
         </div>
         <footer class="article-footer">
@@ -207,7 +226,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/articles/34.html" data-id="cjjjzv0x5001drcu0xgror931" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/articles/34.html" data-id="cjjmgd17j001f5ku0y3dmwsg8" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -344,6 +363,16 @@ var _hmt = _hmt || [];
         
 <nav id="article-nav">
     
+        <a href="/articles/35.html" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">下一篇</strong>
+        <p class="article-nav-title">
+        
+            多出的数字
+        
+        </p>
+        <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+    
     
         <a href="/articles/33.html" id="article-nav-older" class="article-nav-link-wrap">
         <strong class="article-nav-caption">上一篇</strong>
@@ -362,6 +391,26 @@ var _hmt = _hmt || [];
         <h3 class="widget-title">最新文章</h3>
         <div class="widget">
             <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/articles/35.html" class="thumbnail">
+    
+    
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/35/SsmfyXSDUIF2T3ca57aA.jpg)" alt="多出的数字" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/articles/35.html" class="title">多出的数字</a></p>
+                            <p class="item-date"><time datetime="2018-07-15T06:08:39.372Z" itemprop="datePublished">2018-07-15</time></p>
+                        </div>
+                    </li>
                 
                     <li>
                         
@@ -443,26 +492,6 @@ var _hmt = _hmt || [];
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/articles/30.html" class="thumbnail">
-    
-    
-        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/30/photo-1506269351850-0428eaed2193.jpg)" alt="python - jieba库的简单使用" class="thumbnail-image"></span>
-    
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"></p>
-                            <p class="item-title"><a href="/articles/30.html" class="title">python - jieba库的简单使用</a></p>
-                            <p class="item-date"><time datetime="2018-07-02T01:01:54.456Z" itemprop="datePublished">2018-07-02</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -482,7 +511,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap widget-list">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/05/">五月 2018</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">34</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/11/">十一月 2017</a><span class="archive-list-count">1</span></li></ul>
         </div>
     </div>
 
@@ -492,7 +521,7 @@ var _hmt = _hmt || [];
     <div class="widget-wrap widget-float">
         <h3 class="widget-title">标签云</h3>
         <div class="widget tagcloud">
-            <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/Command/" style="font-size: 10px;">Command</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Dos/" style="font-size: 14px;">Dos</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Java/" style="font-size: 12px;">Java</a> <a href="/tags/Javascript/" style="font-size: 12px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Sublime/" style="font-size: 10px;">Sublime</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/Vps/" style="font-size: 10px;">Vps</a> <a href="/tags/Wget/" style="font-size: 10px;">Wget</a> <a href="/tags/Windows/" style="font-size: 12px;">Windows</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/抓包/" style="font-size: 14px;">抓包</a> <a href="/tags/未分类/" style="font-size: 10px;">未分类</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/爬虫/" style="font-size: 16px;">爬虫</a> <a href="/tags/百度网盘/" style="font-size: 12px;">百度网盘</a> <a href="/tags/编程题/" style="font-size: 10px;">编程题</a> <a href="/tags/计算机基础/" style="font-size: 10px;">计算机基础</a>
+            <a href="/tags/Algorithm/" style="font-size: 10px;">Algorithm</a> <a href="/tags/C-C/" style="font-size: 14px;">C/C++</a> <a href="/tags/Command/" style="font-size: 10px;">Command</a> <a href="/tags/Docker/" style="font-size: 10px;">Docker</a> <a href="/tags/Dos/" style="font-size: 14px;">Dos</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Java/" style="font-size: 12px;">Java</a> <a href="/tags/Javascript/" style="font-size: 12px;">Javascript</a> <a href="/tags/Linux/" style="font-size: 10px;">Linux</a> <a href="/tags/Mysql/" style="font-size: 10px;">Mysql</a> <a href="/tags/Python/" style="font-size: 18px;">Python</a> <a href="/tags/Sublime/" style="font-size: 10px;">Sublime</a> <a href="/tags/Tomcat/" style="font-size: 10px;">Tomcat</a> <a href="/tags/Ubuntu/" style="font-size: 12px;">Ubuntu</a> <a href="/tags/Vps/" style="font-size: 10px;">Vps</a> <a href="/tags/Wget/" style="font-size: 10px;">Wget</a> <a href="/tags/Windows/" style="font-size: 12px;">Windows</a> <a href="/tags/cmd/" style="font-size: 10px;">cmd</a> <a href="/tags/php/" style="font-size: 10px;">php</a> <a href="/tags/抓包/" style="font-size: 14px;">抓包</a> <a href="/tags/未分类/" style="font-size: 10px;">未分类</a> <a href="/tags/模板引擎/" style="font-size: 10px;">模板引擎</a> <a href="/tags/爬虫/" style="font-size: 16px;">爬虫</a> <a href="/tags/百度网盘/" style="font-size: 12px;">百度网盘</a> <a href="/tags/编程题/" style="font-size: 12px;">编程题</a> <a href="/tags/计算机基础/" style="font-size: 10px;">计算机基础</a>
         </div>
     </div>
 
