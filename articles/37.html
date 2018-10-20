@@ -24,7 +24,7 @@ var _hmt = _hmt || [];
 </script>
     <meta charset="utf-8">
     
-    <title>Aria2、在线管理面饭、Filemanager的安装梳理 | Sesprie</title>
+    <title>Aria2、aria2-webui在线管理面饭、Filemanager的安装梳理 | Sesprie</title>
     
     
     <!--�Զ��嶥����������ɫ-->
@@ -34,19 +34,19 @@ var _hmt = _hmt || [];
     
         <meta name="keywords" content="aria2" />
     
-    <meta name="description" content="下面的内容取自逗比的文章，过程依赖于逗比的脚本，doub.io 1.安装aria2123wget -N --no-check-certificate https://softs.loan/Bash/aria2.sh &amp;amp;&amp;amp; chmod +x aria2.sh &amp;amp;&amp;amp; bash aria2.sharia2的配置文件在/root/.aria2/aria2.conf，修改r">
+    <meta name="description" content="下面的内容取自逗比的文章，过程依赖于逗比的脚本，doub.io 1.安装aria2后端服务123wget -N --no-check-certificate https://github.com/ToyoDAdoubi/doubi/raw/master/aria2.sh &amp;amp;&amp;amp; chmod +x aria2.sh &amp;amp;&amp;amp; sh aria2.sharia2的配置文件在/">
 <meta name="keywords" content="aria2">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Aria2、在线管理面饭、Filemanager的安装梳理">
+<meta property="og:title" content="Aria2、aria2-webui在线管理面饭、Filemanager的安装梳理">
 <meta property="og:url" content="http://yoursite.com/articles/37.html">
 <meta property="og:site_name" content="Sesprie">
-<meta property="og:description" content="下面的内容取自逗比的文章，过程依赖于逗比的脚本，doub.io 1.安装aria2123wget -N --no-check-certificate https://softs.loan/Bash/aria2.sh &amp;amp;&amp;amp; chmod +x aria2.sh &amp;amp;&amp;amp; bash aria2.sharia2的配置文件在/root/.aria2/aria2.conf，修改r">
+<meta property="og:description" content="下面的内容取自逗比的文章，过程依赖于逗比的脚本，doub.io 1.安装aria2后端服务123wget -N --no-check-certificate https://github.com/ToyoDAdoubi/doubi/raw/master/aria2.sh &amp;amp;&amp;amp; chmod +x aria2.sh &amp;amp;&amp;amp; sh aria2.sharia2的配置文件在/">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/37/0sDkNq0v2kcvitHibclG.jpg">
-<meta property="og:updated_time" content="2018-09-14T14:54:37.836Z">
+<meta property="og:updated_time" content="2018-10-20T04:36:30.149Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Aria2、在线管理面饭、Filemanager的安装梳理">
-<meta name="twitter:description" content="下面的内容取自逗比的文章，过程依赖于逗比的脚本，doub.io 1.安装aria2123wget -N --no-check-certificate https://softs.loan/Bash/aria2.sh &amp;amp;&amp;amp; chmod +x aria2.sh &amp;amp;&amp;amp; bash aria2.sharia2的配置文件在/root/.aria2/aria2.conf，修改r">
+<meta name="twitter:title" content="Aria2、aria2-webui在线管理面饭、Filemanager的安装梳理">
+<meta name="twitter:description" content="下面的内容取自逗比的文章，过程依赖于逗比的脚本，doub.io 1.安装aria2后端服务123wget -N --no-check-certificate https://github.com/ToyoDAdoubi/doubi/raw/master/aria2.sh &amp;amp;&amp;amp; chmod +x aria2.sh &amp;amp;&amp;amp; sh aria2.sharia2的配置文件在/">
 <meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/37/0sDkNq0v2kcvitHibclG.jpg">
     
 
@@ -165,7 +165,7 @@ var _hmt = _hmt || [];
                 
     
         <h1 class="article-title" itemprop="name">
-        Aria2、在线管理面饭、Filemanager的安装梳理
+        Aria2、aria2-webui在线管理面饭、Filemanager的安装梳理
         </h1>
     
 
@@ -192,11 +192,12 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/37/0sDkNq0v2kcvitHibclG.jpg" alt=""></p>
 <p>下面的内容取自逗比的文章，过程依赖于逗比的脚本，doub.io</p>
-<h5 id="1-安装aria2"><a href="#1-安装aria2" class="headerlink" title="1.安装aria2"></a>1.安装aria2</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://softs.loan/Bash/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; bash aria2.sh</span><br><span class="line"></span><br><span class="line">aria2的配置文件在/root/.aria2/aria2.conf，修改rpc-secret的值以更改令牌</span><br></pre></td></tr></table></figure>
-<h5 id="2-安装caddy和filemanager"><a href="#2-安装caddy和filemanager" class="headerlink" title="2.安装caddy和filemanager"></a>2.安装caddy和filemanager</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://softs.loan/Bash/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager</span><br></pre></td></tr></table></figure>
-<h5 id="3-进入虚拟机文件夹安装前端"><a href="#3-进入虚拟机文件夹安装前端" class="headerlink" title="3.进入虚拟机文件夹安装前端"></a>3.进入虚拟机文件夹安装前端</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># 新建并进入文件夹</span><br><span class="line">mkdir /usr/local/caddy/www &amp;&amp; mkdir /usr/local/caddy/www/aria2 &amp;&amp; mkdir /usr/local/caddy/www/aria2/Download</span><br><span class="line">cd /usr/local/caddy/www/aria2</span><br><span class="line"> </span><br><span class="line"># 先安装 Git 依赖。</span><br><span class="line"># CentOS 系统：</span><br><span class="line">yum install git -y</span><br><span class="line"># Debian/Ubuntu 系统：</span><br><span class="line">apt-get install git -y</span><br><span class="line"> </span><br><span class="line"># 然后下载前端文件，这里使用webui-aria2前端，还可选择ariang</span><br><span class="line">git clone https://github.com/ziahamza/webui-aria2.git</span><br><span class="line">mv webui-aria2/* .</span><br><span class="line">rm -rf webui-aria2</span><br><span class="line"># 赋予文件夹权限</span><br><span class="line">chmod -R 755 /usr/local/caddy/www/aria2</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#去掉所有#及其内的内容#</span><br><span class="line">#直接在命令行整体粘贴下面的内容#</span><br><span class="line">echo &quot;:80 &#123;</span><br><span class="line"> root /usr/local/caddy/www/aria2 #访问ip时的起始位置，即aria2前端页面#</span><br><span class="line"> timeouts none</span><br><span class="line"> gzip</span><br><span class="line"> filemanager /Download /usr/local/caddy/www/aria2/Download #访问ip/Download时的位置，即filemanager的起始文件夹# &#123;</span><br><span class="line">  database /usr/local/caddy/filemanager.db</span><br><span class="line"> &#125;</span><br><span class="line">&#125;&quot; &gt; /usr/local/caddy/Caddyfile</span><br></pre></td></tr></table></figure>
-<p>重启caddy：<code>/etc/init.d/caddy restart</code><br>访问你的ip(若访问不了，说明被q)，找到设置-&gt;连接设置-&gt;密码令牌，输入刚修改的<code>rpc-secret</code>的值，随便下载一个文件<br>访问<code>ip/Download</code>，用户名密码均为<code>admin</code>(登录后可在设置中更改密码)，登录后即可看到刚刚下载的文件(前提是上面步骤中的路径均保持一致)，</p>
+<h5 id="1-安装aria2后端服务"><a href="#1-安装aria2后端服务" class="headerlink" title="1.安装aria2后端服务"></a>1.安装aria2后端服务</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://github.com/ToyoDAdoubi/doubi/raw/master/aria2.sh &amp;&amp; chmod +x aria2.sh &amp;&amp; sh aria2.sh</span><br><span class="line"></span><br><span class="line">aria2的配置文件在/root/.aria2/aria2.conf，修改rpc-secret的值以更改令牌</span><br></pre></td></tr></table></figure>
+<h5 id="2-安装caddy和filemanager"><a href="#2-安装caddy和filemanager" class="headerlink" title="2.安装caddy和filemanager"></a>2.安装caddy和filemanager</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -N --no-check-certificate https://github.com/ToyoDAdoubi/doubi/raw/master/caddy_install.sh &amp;&amp; chmod +x caddy_install.sh &amp;&amp; bash caddy_install.sh install http.filemanager</span><br></pre></td></tr></table></figure>
+<h5 id="3-安装aria2-WebUI前端"><a href="#3-安装aria2-WebUI前端" class="headerlink" title="3.安装aria2 WebUI前端"></a>3.安装aria2 WebUI前端</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># 新建aria2文件夹</span><br><span class="line">mkdir /usr/local/caddy/www &amp;&amp; mkdir /usr/local/caddy/www/aria2 &amp;&amp; mkdir /usr/local/caddy/www/aria2/Download &amp;&amp; cd /usr/local/caddy/www/aria2</span><br><span class="line"></span><br><span class="line"># 先安装 Git 依赖。</span><br><span class="line"># CentOS 系统：</span><br><span class="line">yum install git -y</span><br><span class="line"># Debian/Ubuntu 系统：</span><br><span class="line">apt-get install git -y</span><br><span class="line"> </span><br><span class="line"># 然后下载前端文件，这里使用webui-aria2前端，还可选择ariang</span><br><span class="line">git clone https://github.com/ziahamza/webui-aria2.git &amp;&amp; mv webui-aria2/* . &amp;&amp; rm -rf webui-aria2</span><br><span class="line"># 赋予文件夹权限</span><br><span class="line">chmod -R 755 /usr/local/caddy/www/aria2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#去掉所有#及其内的内容#</span><br><span class="line">#直接在命令行整体粘贴下面的内容#</span><br><span class="line">#端口可自行修改，不过前后要保持一致#</span><br><span class="line">echo &quot;:8081 &#123;</span><br><span class="line"> root /usr/local/caddy/www/aria2 #访问ip:port时的起始位置，即aria2前端页面，这个文件夹中要有index.html，具体看文末#</span><br><span class="line"> timeouts none</span><br><span class="line"> gzip</span><br><span class="line"> filemanager /Download /usr/local/caddy/www/aria2/Download #访问ip:port/Download时的位置，即filemanager的起始文件夹# &#123;</span><br><span class="line">  database /usr/local/caddy/filemanager.db</span><br><span class="line"> &#125;</span><br><span class="line">&#125;&quot; &gt; /usr/local/caddy/Caddyfile</span><br></pre></td></tr></table></figure>
+<p>重启caddy：<code>/etc/init.d/caddy restart</code><br>访问你的ip:8081，找到设置-&gt;连接设置-&gt;密码令牌，输入刚修改的<code>/root/.aria2/aria2.conf</code>中的<code>rpc-secret</code>的值，然后确定即可。然后找到添加-&gt;使用链接 随便下载一个文件<br>访问<code>ip:8081/Download</code>，用户名密码均为<code>admin</code>(登录后可在设置中更改密码)，登录后即可看到刚刚下载的文件(前提是上面步骤中的路径均保持一致)</p>
+<h5 id="4-可能遇到的问题"><a href="#4-可能遇到的问题" class="headerlink" title="4.可能遇到的问题"></a>4.可能遇到的问题</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">如果一直链接不上可能是防火墙没有关闭</span><br><span class="line">关闭防火墙</span><br><span class="line">systemctl stop firewalld</span><br><span class="line">systemctl status firewalld # 没有绿色的active就说明已关闭</span><br><span class="line">也可能是ip被q，找代理挂全局</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">可能需要的步骤：</span><br><span class="line">如果连接后出现404 not found，多半是没有index.html文件（由于aria2 Webui更新导致）</span><br><span class="line">cd /usr/local/caddy/www/aria2</span><br><span class="line">查看是否有index.html文件，如果没有，就需要将docs里面的文件都复制出来</span><br><span class="line">yes | cp -rf docs/* .</span><br><span class="line">再次访问ip:port再按照前面的步骤配置令牌即可</span><br></pre></td></tr></table></figure>
 
         </div>
         <footer class="article-footer">
@@ -204,7 +205,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://yoursite.com/articles/37.html" data-id="cjmrpb3vp0024f4u0t76v6rcx" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/articles/37.html" data-id="cjngybtg1001p28u0vf37mbmi" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
@@ -396,7 +397,7 @@ var _hmt = _hmt || [];
                             <a href="/articles/37.html" class="thumbnail">
     
     
-        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/37/0sDkNq0v2kcvitHibclG.jpg)" alt="Aria2、在线管理面饭、Filemanager的安装梳理" class="thumbnail-image"></span>
+        <span style="background-image:url(https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/37/0sDkNq0v2kcvitHibclG.jpg)" alt="Aria2、aria2-webui在线管理面饭、Filemanager的安装梳理" class="thumbnail-image"></span>
     
     
 </a>
@@ -405,7 +406,7 @@ var _hmt = _hmt || [];
                         
                         <div class="item-inner">
                             <p class="item-category"></p>
-                            <p class="item-title"><a href="/articles/37.html" class="title">Aria2、在线管理面饭、Filemanager的安装梳理</a></p>
+                            <p class="item-title"><a href="/articles/37.html" class="title">Aria2、aria2-webui在线管理面饭、Filemanager的安装梳理</a></p>
                             <p class="item-date"><time datetime="2018-09-01T04:19:54.843Z" itemprop="datePublished">2018-09-01</time></p>
                         </div>
                     </li>
