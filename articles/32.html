@@ -34,19 +34,19 @@ var _hmt = _hmt || [];
     
         <meta name="keywords" content="Mysql" />
     
-    <meta name="description" content="最近，开始学习mysql，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到https://dev.mysql.com/downloads/mysql/下载最新版mysql(当前最新版mysql-8.0.13-winx64.zip)，下载后解压到你想放置的文件夹，在文件夹内新建my.ini填入一下内容(根据你的路径修改) 其中有几行用户改变数据库编码">
+    <meta name="description" content="最近，开始学习mysql，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到https://dev.mysql.com/downloads/mysql/下载最新版mysql(当前最新版mysql-8.0.13-winx64.zip)，下载后解压到你想放置的文件夹，在文件夹内新建my.ini填入一下内容(根据你的路径修改) 其中有几行用于改变数据库编码">
 <meta name="keywords" content="Mysql">
 <meta property="og:type" content="article">
 <meta property="og:title" content="mysql - 初见mysql8.0之windows中的安装">
 <meta property="og:url" content="http://sesprie.bid/articles/32.html">
 <meta property="og:site_name" content="Sesprie">
-<meta property="og:description" content="最近，开始学习mysql，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到https://dev.mysql.com/downloads/mysql/下载最新版mysql(当前最新版mysql-8.0.13-winx64.zip)，下载后解压到你想放置的文件夹，在文件夹内新建my.ini填入一下内容(根据你的路径修改) 其中有几行用户改变数据库编码">
+<meta property="og:description" content="最近，开始学习mysql，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到https://dev.mysql.com/downloads/mysql/下载最新版mysql(当前最新版mysql-8.0.13-winx64.zip)，下载后解压到你想放置的文件夹，在文件夹内新建my.ini填入一下内容(根据你的路径修改) 其中有几行用于改变数据库编码">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/32/434adb3931.jpg">
-<meta property="og:updated_time" content="2018-11-28T08:35:46.364Z">
+<meta property="og:updated_time" content="2018-11-29T07:18:21.121Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql - 初见mysql8.0之windows中的安装">
-<meta name="twitter:description" content="最近，开始学习mysql，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到https://dev.mysql.com/downloads/mysql/下载最新版mysql(当前最新版mysql-8.0.13-winx64.zip)，下载后解压到你想放置的文件夹，在文件夹内新建my.ini填入一下内容(根据你的路径修改) 其中有几行用户改变数据库编码">
+<meta name="twitter:description" content="最近，开始学习mysql，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到https://dev.mysql.com/downloads/mysql/下载最新版mysql(当前最新版mysql-8.0.13-winx64.zip)，下载后解压到你想放置的文件夹，在文件夹内新建my.ini填入一下内容(根据你的路径修改) 其中有几行用于改变数据库编码">
 <meta name="twitter:image" content="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/32/434adb3931.jpg">
     
 
@@ -198,7 +198,7 @@ var _hmt = _hmt || [];
         <div class="article-entry" itemprop="articleBody">
             <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/32/434adb3931.jpg" alt=""></p>
 <p>最近，开始学习<code>mysql</code>，按照网站的教程，遇到各种坑，不知道是教程讲的原因还是我理解有问题，不过经过一番摸索还是解决了，到<code>https://dev.mysql.com/downloads/mysql/</code>下载最新版<code>mysql</code>(当前最新版mysql-8.0.13-winx64.zip)，下载后解压到你想放置的文件夹，在文件夹内新建<code>my.ini</code>填入一下内容(根据你的路径修改)</p>
-<p>其中有几行用户改变数据库编码方式，以防导入数据库时出现<code>ERROR 1366 (HY000) at line 55: Incorrect string value: &#39;\x93&#39; for column &#39;courseName&#39; at row 1</code>这种错误</p>
+<p>其中有几行用于改变数据库编码方式，以防导入数据库时出现<code>ERROR 1366 (HY000) at line 55: Incorrect string value: &#39;\x93&#39; for column &#39;courseName&#39; at row 1</code>这种错误</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[mysql]</span><br><span class="line">default-character-set=utf8mb4</span><br><span class="line"></span><br><span class="line">[mysqld]</span><br><span class="line">character-set-server=utf8mb4</span><br><span class="line">collation-server=utf8mb4_unicode_ci</span><br><span class="line">default_authentication_plugin=mysql_native_password</span><br><span class="line">basedir=D:/mysql-8.0.11-winx64</span><br><span class="line">datadir=D:/mysql-8.0.11-winx64/data</span><br></pre></td></tr></table></figure>
 <p><code>data</code>目录不需要自己创建，路径需要用反斜线<code>/</code></p>
 <p><img src="https://github.com/Sesprie/sesprie_site_repository01/raw/master/articles/pictures/32/2018-07-03_185426.jpg" alt=""></p>
@@ -217,7 +217,7 @@ var _hmt = _hmt || [];
 
 
 
-    <a data-url="http://sesprie.bid/articles/32.html" data-id="cjp0x4utr001gugthh57uitsk" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://sesprie.bid/articles/32.html" data-id="cjp29x6da001cpgth8hf0tdbc" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         $('body').on('click', function() {
