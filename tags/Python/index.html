@@ -79,9 +79,15 @@ var _hmt = _hmt || [];
                 <div id="header-title">
                     <h1 class="logo-wrap">
                         <a href="/" class="logo"></a>
-						<p id="hitokoto1" style="color:	#FFA500">:D 获取中...</p>
-						<!-- 新 API 方法， 十分简洁 -->
-						<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto1" defer></script>
+
+						<!-- 今日诗词 -->
+						<span id="jinrishici-sentence" style="color:#FFA500">加载中...ヾ(≧▽≦*)o</span>
+						<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+
+						<!-- 一言 -->
+						<!--<p id="hitokoto1" style="color:#FFA500">:D 获取中...</p>
+						 新 API 方法， 十分简洁 
+						<script src="https://v1.hitokoto.cn/?encode=js&select=%23hitokoto1" defer></script>-->
                     </h1>
 					
 			
@@ -917,7 +923,7 @@ python3下没有urllib2，可以用requests替代，这里没有写目录是否�
                 <h1 class="logo-wrap">
                     <a href="/" class="logo"></a>
                 </h1>
-                <p>&copy; 2019 Sesprie</p>
+                <p>&copy; 2021 Sesprie</p>
 			
 				<p id="hitokoto">:D 获取中...</p>
 				<!-- 新 API 方法， 十分简洁 -->
